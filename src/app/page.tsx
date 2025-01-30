@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
+import { AtSymbolIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -62,18 +63,10 @@ export default function Home() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:joseph@fogiato.com"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <AtSymbolIcon className="w-4 h-4" aria-hidden />
+          Email
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
