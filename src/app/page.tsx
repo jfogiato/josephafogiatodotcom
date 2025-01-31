@@ -5,7 +5,7 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-between min-h-screen p-8 sm:p-20 text-white"
       style={{
-        backgroundImage: "url('/images/basketball_hoop_film.jpg')",
+        backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/images/basketball_hoop_film.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
