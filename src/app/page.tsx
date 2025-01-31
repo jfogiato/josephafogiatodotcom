@@ -1,8 +1,6 @@
 import { BriefcaseIcon, AtSymbolIcon } from "@heroicons/react/24/outline";
-import getConfig from "next/config";
 
-const { publicRuntimeConfig } = getConfig();
-const basePath = publicRuntimeConfig?.basePath || "/josephafogiatodotcom";
+const basePath = process.env.NODE_ENV === "production" ? "/josephafogiatodotcom" : "";
 
 export default function Home() {
   return (
