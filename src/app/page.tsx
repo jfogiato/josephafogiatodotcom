@@ -1,5 +1,5 @@
 import { BriefcaseIcon, AtSymbolIcon, FilmIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
-import { CroissantIcon, CableCarIcon, CrownIcon } from "lucide-react";
+import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-3">
         <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
         <div className="flex flex-row items-center gap-4">
@@ -31,10 +31,13 @@ export default function Home() {
           <Link href="/england" className="hover:scale-110 transition">
             <CrownIcon className="w-10 h-10 text-white" />
           </Link>
+
+          <Link href="/mummers" className="hover:scale-110 transition">
+            <PartyPopperIcon className="w-10 h-10 text-white" />
+          </Link>
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="flex gap-6 flex-wrap items-center justify-center py-6 bg-black/25 backdrop-blur-sm px-4 rounded-md">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white"
