@@ -12,7 +12,6 @@ export default function Home() {
       }}
     >
       {/* Empty spacer to push content down */}
-      {/* <div className="flex-1" /> */}
 
       <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
