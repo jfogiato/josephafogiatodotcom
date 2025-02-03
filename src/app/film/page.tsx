@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const images = [
   "/images/film1.jpg",
@@ -24,12 +24,24 @@ const images = [
   "/images/film18.jpg",
 ];
 
+
 export default function FilmPage() {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setFullscreenImage(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4">
-      <h1 className="text-4xl font-bold mb-6">Film Gallery</h1>
+      <h1 className="text-4xl font-bold mb-6">Film.</h1>
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -51,6 +63,7 @@ export default function FilmPage() {
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center"
           onClick={() => setFullscreenImage(null)}
+          onKeyDown={(event) => event.key === "Escape" && setFullscreenImage(null)}
         >
           <Image
             src={fullscreenImage}
