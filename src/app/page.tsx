@@ -1,5 +1,5 @@
-import { BriefcaseIcon, AtSymbolIcon } from "@heroicons/react/24/outline";
-
+import { BriefcaseIcon, AtSymbolIcon, FilmIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,11 +11,18 @@ export default function Home() {
         backgroundPosition: "center",
       }}
     >
-      {/* Empty spacer to push content down */}
+      <div className="flex flex-col items-center gap-4">
+        {/* Main Title */}
+        <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
-      <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
+        {/* Film Button */}
+        <Link href="/film" className="hover:scale-110 transition">
+          <FilmIcon className="w-10 h-10 text-white" />
+        </Link>
+      </div>
 
-      <footer className="flex gap-6 flex-wrap items-center justify-center py-6 bg-black/25git  backdrop-blur-sm px-4 rounded-md">
+      {/* Footer */}
+      <footer className="flex gap-6 flex-wrap items-center justify-center py-6 bg-black/25 backdrop-blur-sm px-4 rounded-md">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white"
           href="https://www.linkedin.com/in/joseph-fogiato/"
