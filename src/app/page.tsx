@@ -1,13 +1,12 @@
 import { BriefcaseIcon, AtSymbolIcon } from "@heroicons/react/24/outline";
 
-const basePath = process.env.NODE_ENV === "production" ? "/josephafogiatodotcom" : "";
 
 export default function Home() {
   return (
     <div
       className="flex flex-col items-center justify-between min-h-screen p-8 sm:p-20 text-white"
       style={{
-        backgroundImage: `url('${basePath}/images/basketball_hoop_film.jpg')`,
+        backgroundImage: "url(/images/basketball_film.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
