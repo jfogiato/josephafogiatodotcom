@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Header from "@/components/Header";
 
 const images = [
   "/images/film1.jpg",
@@ -24,7 +25,6 @@ const images = [
   "/images/film18.jpg",
 ];
 
-
 export default function FilmPage() {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
   
@@ -41,18 +41,22 @@ export default function FilmPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4">
+      <Header />
       <h1 className="text-4xl font-bold mb-6">Film.</h1>
 
-      {/* Image Grid */}
+      {/* Image Grid with Fixed Square Thumbnails */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((src, index) => (
-          <button key={index} onClick={() => setFullscreenImage(src)}>
+          <button
+            key={index}
+            onClick={() => setFullscreenImage(src)}
+            className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 overflow-hidden rounded-lg"
+          >
             <Image
               src={src}
               alt={`Film ${index + 1}`}
-              width={200}
-              height={200}
-              className="object-cover rounded-lg cursor-pointer hover:scale-105 transition"
+              fill
+              className="object-cover"
             />
           </button>
         ))}
