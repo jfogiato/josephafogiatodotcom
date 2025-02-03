@@ -1,5 +1,5 @@
 import { BriefcaseIcon, AtSymbolIcon, FilmIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
-import { CroissantIcon, CableCarIcon } from "lucide-react";
+import { CroissantIcon, CableCarIcon, CrownIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,7 +13,6 @@ export default function Home() {
       }}
     >
       <div className="flex flex-col items-center gap-4">
-        {/* Main Title */}
         <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
         <div className="flex flex-row items-center gap-4">
@@ -27,7 +26,11 @@ export default function Home() {
 
           <Link href="/germany" className="hover:scale-110 transition">
             <CableCarIcon className="w-10 h-10 text-white" />
-          </Link>'
+          </Link>
+
+          <Link href="/england" className="hover:scale-110 transition">
+            <CrownIcon className="w-10 h-10 text-white" />
+          </Link>
         </div>
       </div>
 
