@@ -9,7 +9,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Joseph A. Fogiato dot com",
+  title: "Joseph A. Fogiato Dot Com",
   description: "Weird.",
 };
 
