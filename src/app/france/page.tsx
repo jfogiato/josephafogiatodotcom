@@ -35,6 +35,6 @@ const franceImages = [
   "/images/france32.jpg",
 ];
 
-export default function FilmPage() {
+export default function FrancePage() {
   return <BlogTemplate title="France." images={franceImages} />;
 }

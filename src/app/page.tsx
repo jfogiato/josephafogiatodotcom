@@ -1,4 +1,5 @@
 import { BriefcaseIcon, AtSymbolIcon, FilmIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
+import { CroissantIcon, CableCarIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,7 +22,11 @@ export default function Home() {
           </Link>
 
           <Link href="/france" className="hover:scale-110 transition">
-            <GlobeEuropeAfricaIcon className="w-10 h-10 text-white" />
+            <CroissantIcon className="w-10 h-10 text-white" />
+          </Link>
+
+          <Link href="/germany" className="hover:scale-110 transition">
+            <CableCarIcon className="w-10 h-10 text-white" />
           </Link>'
         </div>
       </div>
