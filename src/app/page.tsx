@@ -1,4 +1,4 @@
-import { BriefcaseIcon, AtSymbolIcon, FilmIcon } from "@heroicons/react/24/outline";
+import { BriefcaseIcon, AtSymbolIcon, FilmIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 export default function Home() {
@@ -15,10 +15,15 @@ export default function Home() {
         {/* Main Title */}
         <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
-        {/* Film Button */}
-        <Link href="/film" className="hover:scale-110 transition">
-          <FilmIcon className="w-10 h-10 text-white" />
-        </Link>
+        <div className="flex flex-row items-center gap-4">
+          <Link href="/film" className="hover:scale-110 transition">
+            <FilmIcon className="w-10 h-10 text-white" />
+          </Link>
+
+          <Link href="/france" className="hover:scale-110 transition">
+            <GlobeEuropeAfricaIcon className="w-10 h-10 text-white" />
+          </Link>'
+        </div>
       </div>
 
       {/* Footer */}
