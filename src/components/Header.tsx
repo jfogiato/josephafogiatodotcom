@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HomeIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { HomeIcon } from "@heroicons/react/24/outline";
 
 interface HeaderProps {
   currentPath: string;
