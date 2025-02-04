@@ -23,7 +23,7 @@ export default function BlogTemplate({ title, images }: BlogTemplateProps) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-grey text-white">
+    <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-black dark:text-white">
       <div className="sticky top-0 w-full bg-grey bg-opacity-90 backdrop-blur-md flex flex-col items-center py-4 z-10">
         <Header />
         <h1 className="text-4xl font-bold mt-2">{title}</h1>
