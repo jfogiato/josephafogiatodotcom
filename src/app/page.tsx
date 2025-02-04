@@ -1,4 +1,4 @@
-import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon, GithubIcon, FilmIcon, AtSignIcon, BriefcaseBusinessIcon } from "lucide-react";
+import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon, GithubIcon, FilmIcon, AtSignIcon, BriefcaseBusinessIcon, BinaryIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -27,6 +27,7 @@ export default function Home() {
             { href: "/hawaii", icon: TreePalmIcon, label: "Hawaii" },
             { href: "/faces", icon: ScanFaceIcon, label: "Faces" },
             { href: "/philly", icon: BellIcon, label: "Philly" },
+            { href: "/software", icon: BinaryIcon, label: "Software" },
           ].map(({ href, icon: Icon, label }) => (
 
             <Link key={href} href={href} className="relative group">
