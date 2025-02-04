@@ -13,9 +13,11 @@ export default function Home() {
       }}
     >
       <div className="flex flex-col items-center gap-3 ">
-        <Link href="/whoami">
-          <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-xl">Joseph A. Fogiato</h1>
-        </Link>
+      <Link href="/whoami">
+        <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-xl hover:text-gray-200 transition">
+          Joseph A. Fogiato
+        </h1>
+      </Link>
 
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-4 max-w-[80%]">
