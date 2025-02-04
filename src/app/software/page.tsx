@@ -2,12 +2,13 @@
 
 import Header from "@/components/Header";
 import ProjectSection from "@/components/ProjectSection";
+import { pages } from "@/data/pages";
 
 export default function SoftwarePage() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-900 text-white p-8">
 
-      <Header />
+      <Header currentPath="/software" pages={pages} />
 
       <h1 className="text-4xl font-bold mb-6">Software Projects</h1>
 
