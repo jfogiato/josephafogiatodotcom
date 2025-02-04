@@ -12,7 +12,7 @@ export default function Home() {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col items-center gap-3">
+      <div className="flex flex-col items-center gap-3 ">
         <h1 className="text-4xl sm:text-6xl font-bold">Joseph A. Fogiato</h1>
 
         {/* Navigation */}
