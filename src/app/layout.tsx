@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import BugReportButton from "@/components/BugReportButton";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -18,7 +19,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={raleway.variable}>
-      <body className="font-mono antialiased">{children}</body>
+      <body className="font-mono antialiased">
+        {children}
+        <BugReportButton />
+      </body>
     </html>
   );
 }
