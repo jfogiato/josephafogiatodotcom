@@ -3,10 +3,10 @@ name: Run Cypress Tests Before Deploying
 on:
   push:
     branches:
-      - main  # Runs tests on pushes to main
+      - main
   pull_request:
     branches:
-      - main  # Runs tests on PRs to main
+      - main
 
 jobs:
   cypress-run:
@@ -34,6 +34,16 @@ jobs:
       - name: Run Cypress tests
         run: npm run test:e2e
 
-      - name: Deploy to Vercel (only on main branch)
-        if: success() && github.ref == 'refs/heads/main'
-        run: npx vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+  deploy:
+    needs: cypress-run  # ✅ Deployment only happens if Cypress tests pass
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Vercel CLI
+        run: npm install --save-dev vercel
+
+      - name: Deploy to Vercel
+        run: npx vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }} --scope jfogiato --project josephafogiatodotcom
