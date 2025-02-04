@@ -1,5 +1,4 @@
-import { BriefcaseIcon, AtSymbolIcon, FilmIcon } from "@heroicons/react/24/outline";
-import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon } from "lucide-react";
+import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon, GithubIcon, FilmIcon, AtSignIcon, BriefcaseBusinessIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -49,15 +48,24 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BriefcaseIcon className="w-5 h-5" aria-hidden />
+          <BriefcaseBusinessIcon className="w-5 h-5" aria-hidden />
           Professional
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white"
           href="mailto:joseph@fogiato.com"
         >
-          <AtSymbolIcon className="w-5 h-5" aria-hidden />
+          <AtSignIcon className="w-5 h-5" aria-hidden />
           Email
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white text-xs"
+          href="https://github.com/jfogiato"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubIcon className="w-5 h-5" aria-hidden />
+          01000011 01001111 01000100 01000101
         </a>
       </footer>
     </div>
