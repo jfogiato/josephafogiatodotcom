@@ -14,7 +14,7 @@ export default function AboutMe() {
         <div className="flex justify-center mb-6">
           <div className="w-[70vw] max-w-[500px]">
             <Image
-              src="/images/me1.jpg"
+              src="/images/me1.JPG"
               alt="Joseph A. Fogiato"
               width={600}
               height={600}
