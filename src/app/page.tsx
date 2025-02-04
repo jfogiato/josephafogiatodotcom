@@ -1,6 +1,20 @@
 import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon, GithubIcon, FilmIcon, AtSignIcon, BriefcaseBusinessIcon, BinaryIcon } from "lucide-react";
 import Link from "next/link";
 
+export const pages = [
+  { href: "/film", icon: FilmIcon, label: "Film" },
+  { href: "/france", icon: CroissantIcon, label: "France" },
+  { href: "/germany", icon: CableCarIcon, label: "Germany" },
+  { href: "/england", icon: CrownIcon, label: "England" },
+  { href: "/mummers", icon: PartyPopperIcon, label: "Mummers" },
+  { href: "/climate_strike", icon: SunriseIcon, label: "Climate Strike" },
+  { href: "/colombia", icon: WavesIcon, label: "Colombia" },
+  { href: "/hawaii", icon: TreePalmIcon, label: "Hawaii" },
+  { href: "/faces", icon: ScanFaceIcon, label: "Faces" },
+  { href: "/philly", icon: BellIcon, label: "Philly" },
+  { href: "/software", icon: BinaryIcon, label: "Software" },
+];
+
 export default function Home() {
   return (
     <div
@@ -16,19 +30,7 @@ export default function Home() {
 
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-4 max-w-[80%]">
-          {[
-            { href: "/film", icon: FilmIcon, label: "Film" },
-            { href: "/france", icon: CroissantIcon, label: "France" },
-            { href: "/germany", icon: CableCarIcon, label: "Germany" },
-            { href: "/england", icon: CrownIcon, label: "England" },
-            { href: "/mummers", icon: PartyPopperIcon, label: "Mummers" },
-            { href: "/climate_strike", icon: SunriseIcon, label: "Climate Strike" },
-            { href: "/colombia", icon: WavesIcon, label: "Colombia" },
-            { href: "/hawaii", icon: TreePalmIcon, label: "Hawaii" },
-            { href: "/faces", icon: ScanFaceIcon, label: "Faces" },
-            { href: "/philly", icon: BellIcon, label: "Philly" },
-            { href: "/software", icon: BinaryIcon, label: "Software" },
-          ].map(({ href, icon: Icon, label }) => (
+          {pages.map(({ href, icon: Icon, label }) => (
 
             <Link key={href} href={href} className="relative group">
               <Icon className="w-8 h-8 group-hover:scale-110 transition" />
