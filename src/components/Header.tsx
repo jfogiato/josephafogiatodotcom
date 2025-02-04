@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { HomeModernIcon } from "@heroicons/react/24/outline";
 
 interface HeaderProps {
   currentPath: string;
@@ -19,7 +19,7 @@ export default function Header({ currentPath, pages }: HeaderProps) {
       
       {/* Home Button */}
       <Link href="/" className="flex items-center gap-2 hover:text-gray-300">
-        <HomeIcon className="w-6 h-6" />
+        <HomeModernIcon className="w-6 h-6" />
       </Link>
 
       {/* Next Page Button */}
