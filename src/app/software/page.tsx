@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header";
 import ProjectSection from "@/components/ProjectSection";
-import { pages } from "@/app/page";
+import { pages } from "@/data/pages";
 
 export default function SoftwarePage() {
   return (

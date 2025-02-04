@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { pages } from "@/app/page";
+import { pages } from "@/data/pages";
 
 interface BlogTemplateProps {
   title: string;
@@ -43,6 +43,7 @@ export default function BlogTemplate({ title, images, href }: BlogTemplateProps)
               src={src}
               alt={`${title} ${index + 1}`}
               fill
+              sizes={`(min-width: 1024px) 25vw, (min-width: 640px) 33.333vw, 50vw`}
               className="object-cover"
             />
           </button>
@@ -60,7 +61,7 @@ export default function BlogTemplate({ title, images, href }: BlogTemplateProps)
             alt="Fullscreen"
             width={800}
             height={800}
-            className="object-contain max-w-full max-h-full"
+            className="object-contain max-w-full max-h-[85vh]"
           />
         </div>
       )}
