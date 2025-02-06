@@ -6,7 +6,7 @@ import { pages } from "@/data/pages";
 
 export default function SoftwarePage() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-900 text-white p-8">
+    <div className="flex flex-col items-center min-h-screen text-black dark:bg-black dark:text-white p-8">
 
       <Header currentPath="/software" pages={pages} />
 
