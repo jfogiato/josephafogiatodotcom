@@ -1,4 +1,4 @@
-import { GithubIcon, AtSignIcon, BriefcaseBusinessIcon, } from "lucide-react";
+import { GithubIcon, AtSignIcon, LinkedinIcon, InstagramIcon } from "lucide-react";
 import { pages } from "../data/pages";
 import Link from "next/link";
 
@@ -14,8 +14,14 @@ export default function Home() {
     >
       <div className="flex flex-col items-center gap-3 ">
       <Link href="/whoami">
-        <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-xl hover:text-gray-200 transition">
-          Joseph A. Fogiato
+        <h1
+          className="text-center text-5xl font-bold drop-shadow-xl transition hover:text-gray-200 hover:scale-105 hover: hover:underline-offset-4"
+          style={{
+            animation: "jiggle 5s ease-in-out infinite",
+            animationIterationCount: "infinite",
+          }}
+        >
+          Joseph A. Fogiato.
         </h1>
       </Link>
 
@@ -35,32 +41,39 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="flex gap-6 flex-wrap items-center justify-center py-6 bg-black/25 backdrop-blur-sm px-4 rounded-md">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white"
-          href="https://www.linkedin.com/in/joseph-fogiato/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BriefcaseBusinessIcon className="w-5 h-5" aria-hidden />
-          Professional
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white"
-          href="mailto:joseph@fogiato.com"
-        >
-          <AtSignIcon className="w-5 h-5" aria-hidden />
-          Email
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white text-xs"
-          href="https://github.com/jfogiato"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon className="w-5 h-5" aria-hidden />
-          01000011 01001111 01000100 01000101
-        </a>
+      <footer className="grid grid-cols-2 gap-6 justify-items-center py-6 px-4 rounded-md bg-black/25 backdrop-blur-sm sm:w-[17vw] w-[25vw]">
+        {[
+          {
+            href: "https://www.linkedin.com/in/joseph-fogiato/",
+            icon: LinkedinIcon,
+            label: "Professional.",
+          },
+          {
+            href: "mailto:joseph@fogiato.com",
+            icon: AtSignIcon,
+            label: "Email.",
+          },
+          {
+            href: "https://github.com/jfogiato",
+            icon: GithubIcon,
+            label: "Code.",
+          },
+          {
+            href: "https://www.instagram.com/alrightsrsrvd/",
+            icon: InstagramIcon,
+            label: "Personal.",
+          },
+        ].map(({ href, icon: Icon, label }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="relative group">
+
+            <Icon className="w-6 h-6 text-white transition-transform group-hover:scale-110" />
+
+            <span className="absolute left-1/2 -translate-x-1/2 -bottom-8 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
+              {label}
+            </span>
+
+          </a>
+        ))}
       </footer>
     </div>
   );
