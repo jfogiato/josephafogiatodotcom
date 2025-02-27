@@ -3,11 +3,14 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import ProjectSection from "@/components/ProjectSection";
+import TechSection from "@/components/TechSection";
 import { pages } from "@/data/pages";
+import { techTiersAndSkills } from "@/data/technologies";
 import { ChevronDownIcon } from "lucide-react";
 import { PiMicrosoftExcelLogoLight } from "react-icons/pi";
 import { BiLogoMicrosoft } from "react-icons/bi";
-import { SiNextdotjs, SiJavascript, SiPython, SiTailwindcss, SiReact, SiElixir, SiPostgresql, SiCypress, SiTypescript, SiRubyonrails } from "react-icons/si";
+import { SiNextdotjs, SiJavascript, SiPython, SiTailwindcss, SiReact, SiElixir, SiPostgresql, SiCypress, SiTypescript, SiRubyonrails, SiPhoenixframework } from "react-icons/si";
+
 
 export default function SoftwarePage() {
   const [showProjects, setShowProjects] = useState(false);
@@ -34,65 +37,9 @@ export default function SoftwarePage() {
         
         {showTechnologies && (
           <div className="mt-4 space-y-8">
-            {/* 🚀 Tinkerer (Beginner) */}
-            <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-md">
-              <h2 className="text-2xl font-semibold text-center mb-4">Tinkerer.</h2>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">
-                  <SiPostgresql className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
-                  <SiPython className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://rubyonrails.org/" target="_blank" rel="noopener noreferrer">
-                  <SiRubyonrails className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-              </div>
-            </div>
-
-            {/* ⚡ Builder (Intermediate) */}
-            <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-md">
-              <h2 className="text-2xl font-semibold text-center mb-4">Builder.</h2>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
-                  <SiTailwindcss className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://elixir-lang.org/" target="_blank" rel="noopener noreferrer">
-                  <SiElixir className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://www.cypress.io/" target="_blank" rel="noopener noreferrer">
-                  <SiCypress className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-              </div>
-            </div>
-
-            {/* 🧙 Wizard (Proficient) */}
-            <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-md">
-              <h2 className="text-2xl font-semibold text-center mb-4">Wizard.</h2>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-                  <SiReact className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
-                  <SiNextdotjs className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
-                  <SiJavascript className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
-                  <SiTypescript className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://support.microsoft.com/en-us/excel" target="_blank" rel="noopener noreferrer">
-                  <PiMicrosoftExcelLogoLight className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://powerautomate.microsoft.com/" target="_blank" rel="noopener noreferrer">
-                  <BiLogoMicrosoft className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-                <a href="https://powerapps.microsoft.com/" target="_blank" rel="noopener noreferrer">
-                  <BiLogoMicrosoft className="w-10 h-10 text-white hover:scale-110 transition" />
-                </a>
-              </div>
-            </div>
+            {techTiersAndSkills.map((tier, index) => (
+              <TechSection key={index} title={tier.title} technologies={tier.technologies} />
+            ))}
           </div>
         )}
       </div>
@@ -113,7 +60,7 @@ export default function SoftwarePage() {
           <div className="mt-4 space-y-4">
             <ProjectSection
               title="This site."
-              description="Just me."
+              description="Home grown using Next.js, Typescript, and Cypress (with some other odds and ends)."
               images={[]}
               githubUrl="https://github.com/jfogiato/josephafogiatodotcom"
               liveUrl="https://fogiato.com"
