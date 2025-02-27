@@ -35,7 +35,7 @@ export default function SoftwarePage() {
         {showTechnologies && (
           <div className="mt-4 space-y-8">
             {techTiersAndSkills.map((tier, index) => (
-              <TechSection key={index} title={tier.title} technologies={tier.technologies} />
+              <TechSection key={index} title={tier.title} subtitle={tier.subtitle} technologies={tier.technologies} />
             ))}
           </div>
         )}
