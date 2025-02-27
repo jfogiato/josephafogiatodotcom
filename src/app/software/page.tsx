@@ -7,9 +7,6 @@ import TechSection from "@/components/TechSection";
 import { pages } from "@/data/pages";
 import { techTiersAndSkills } from "@/data/technologies";
 import { ChevronDownIcon } from "lucide-react";
-import { PiMicrosoftExcelLogoLight } from "react-icons/pi";
-import { BiLogoMicrosoft } from "react-icons/bi";
-import { SiNextdotjs, SiJavascript, SiPython, SiTailwindcss, SiReact, SiElixir, SiPostgresql, SiCypress, SiTypescript, SiRubyonrails, SiPhoenixframework } from "react-icons/si";
 
 
 export default function SoftwarePage() {
