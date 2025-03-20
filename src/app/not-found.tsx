@@ -20,8 +20,8 @@ export default function NotFound() {
         <h2 className="text-3xl font-bold mt-4 w-full max-w-[70%] min-w-[60%] text-center">Does anything really exist?</h2>
         <h3 className="text-2xl font-bold mt-4 w-full max-w-[60%] min-w-[50%] text-center">Do I even really exist?</h3>
         <h4 className="text-xl font-bold mt-4 w-full max-w-[50%] min-w-[40%] text-center">Do you even really exist?</h4>
-        <h5 className="text-l font-bold mt-4 w-full max-w-[35%] min-w-[30%] text-center">What's worth living for?</h5>
-        <h6 className="text-m font-bold mt-4 w-full max-w-[35%] min-w-[25%] text-center">What's worth dying for?</h6>
+        <h5 className="text-l font-bold mt-4 w-full max-w-[35%] min-w-[30%] text-center">What&apos;s worth living for?</h5>
+        <h6 className="text-m font-bold mt-4 w-full max-w-[35%] min-w-[25%] text-center">What&apos;s worth dying for?</h6>
         <p className="text-s font-bold mt-4 w-full max-w-[25%] min-w-[15%] text-center">How do we exist among such pain?</p>
         <p className="text-xs font-bold mt-4 w-full max-w-[15%] min-w-[8%] text-center">How do we go on?</p>
         <p className="text-xs font-bold mt-4 w-full max-w-[8%] min-w-[5%] text-center">Will it ever stop?</p>
