@@ -16,7 +16,7 @@ export default function NotFound() {
 
       {/* Existential Crisis Section */}
       <div className="flex flex-col items-center mt-10">
-        <h1 className="text-5xl font-bold mt-4 mb-10 w-full max-w-[80%] min-w-[70%] text-center">This page doesn't exist.</h1>
+        <h1 className="text-5xl font-bold mt-4 mb-10 w-full max-w-[80%] min-w-[70%] text-center">This page doesn&apos;t exist.</h1>
         <h2 className="text-3xl font-bold mt-4 w-full max-w-[70%] min-w-[60%] text-center">Does anything really exist?</h2>
         <h3 className="text-2xl font-bold mt-4 w-full max-w-[60%] min-w-[50%] text-center">Do I even really exist?</h3>
         <h4 className="text-xl font-bold mt-4 w-full max-w-[50%] min-w-[40%] text-center">Do you even really exist?</h4>
