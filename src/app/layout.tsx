@@ -10,8 +10,46 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+
   title: "Joseph A. Fogiato Dot Com",
-  description: "Weird.",
+  description: "Very weird.", 
+
+  openGraph: {
+    title: "Joseph A. Fogiato",
+    description: "Very weird.",
+    url: "https://fogiato.com",
+    siteName: "fogiato.com",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/me1.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Joseph A. Fogiato",
+      },
+    ],
+  },
+
+  appleWebApp: {
+    title: "fogiato.com",
+    statusBarStyle: "black-translucent",
+  },
+
+  keywords: ["Joseph Fogiato", "software", "photography", "Philadelphia", "developer"],
+  authors: [{ name: "Joseph Fogiato", url: "https://fogiato.com" }],
+  creator: "Joseph A. Fogiato",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
