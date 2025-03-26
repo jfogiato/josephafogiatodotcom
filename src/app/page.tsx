@@ -1,6 +1,7 @@
 import LinkFooter from "@/components/LinkFooter";
 import { pages } from "../data/pages";
 import Link from "next/link";
+import BasketballButton from "@/components/BasketballButton";
 
 export default function Home() {
   return (
@@ -38,7 +39,10 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <LinkFooter />
+      <div className="flex flex-col items-center gap-4">
+        <BasketballButton />
+        <LinkFooter />
+      </div>
     </div>
   );
 }
