@@ -21,9 +21,60 @@ body {
 }
 
 @keyframes jiggle {
-  0%, 94% { transform: rotate(0deg); }
-  95% { transform: rotate(1deg); } 
-  97% { transform: rotate(-1deg); } 
-  99% { transform: rotate(1deg); }
-  100% { transform: rotate(0deg); }
+  0%,
+  94% {
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(1deg);
+  }
+  97% {
+    transform: rotate(-1deg);
+  }
+  99% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media print {
+  /* Hide anything with the .no-print class */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make background white and text black for legibility */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Remove shadows and rounded corners */
+  * {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Force full width layout for printing */
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Reduce padding/margin to save space */
+  .print-compact {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide interactive elements */
+  button,
+  a[href^="http"] {
+    text-decoration: none;
+    color: black !important;
+  }
 }

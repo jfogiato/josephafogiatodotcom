@@ -15,15 +15,20 @@ export default function Header({ currentPath, pages }: HeaderProps) {
   const nextPage = pages[nextIndex];
 
   return (
-    <div className="flex justify-between items-center w-full p-4 text-white fixed top-0 left-0 right-0">
-      
+    <div className="flex justify-between items-center w-full p-4 text-white fixed top-0 left-0 right-0 no-print">
       {/* Home Button */}
-      <Link href="/" className="flex items-center gap-2 hover:text-gray-300 text-black dark:text-white">
+      <Link
+        href="/"
+        className="flex items-center gap-2 hover:text-gray-300 text-black dark:text-white"
+      >
         <HomeModernIcon className="w-6 h-6" />
       </Link>
 
       {/* Next Page Button */}
-      <Link href={nextPage.href} className="flex items-center gap-2 hover:text-gray-300">
+      <Link
+        href={nextPage.href}
+        className="flex items-center gap-2 hover:text-gray-300"
+      >
         <nextPage.icon className="w-6 h-6 text-black dark:text-white" />
       </Link>
     </div>

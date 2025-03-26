@@ -8,14 +8,12 @@ import { pages } from "@/data/pages";
 import { techTiersAndSkills } from "@/data/technologies";
 import { ChevronDownIcon } from "lucide-react";
 
-
 export default function SoftwarePage() {
   const [showProjects, setShowProjects] = useState(false);
   const [showTechnologies, setShowTechnologies] = useState(false);
 
   return (
     <div className="flex flex-col items-center min-h-screen text-black dark:bg-black dark:text-white p-8">
-
       <Header currentPath="/software" pages={pages} />
 
       <h1 className="text-4xl font-bold mb-6">Software.</h1>
@@ -31,11 +29,16 @@ export default function SoftwarePage() {
             className={`w-6 h-6 transition-transform ${showTechnologies ? "rotate-180" : ""}`}
           />
         </button>
-        
+
         {showTechnologies && (
           <div className="mt-4 space-y-8">
             {techTiersAndSkills.map((tier, index) => (
-              <TechSection key={index} title={tier.title} subtitle={tier.subtitle} technologies={tier.technologies} />
+              <TechSection
+                key={index}
+                title={tier.title}
+                subtitle={tier.subtitle}
+                technologies={tier.technologies}
+              />
             ))}
           </div>
         )}

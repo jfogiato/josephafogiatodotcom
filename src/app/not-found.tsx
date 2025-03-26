@@ -14,18 +14,36 @@ export default function NotFound() {
         {/* Spooky Ghost Icon */}
         <ShellIcon className="w-20 h-20 text-gray-500 dark:text-gray-300 animate-spin" />
 
-      {/* Existential Crisis Section */}
-      <div className="flex flex-col items-center mt-10">
-        <h1 className="text-5xl font-bold mt-4 mb-10 w-full max-w-[80%] min-w-[70%] text-center">This page doesn&apos;t exist.</h1>
-        <h2 className="text-3xl font-bold mt-4 w-full max-w-[70%] min-w-[60%] text-center">Does anything really exist?</h2>
-        <h3 className="text-2xl font-bold mt-4 w-full max-w-[60%] min-w-[50%] text-center">Do I even really exist?</h3>
-        <h4 className="text-xl font-bold mt-4 w-full max-w-[50%] min-w-[40%] text-center">Do you even really exist?</h4>
-        <h5 className="text-l font-bold mt-4 w-full max-w-[35%] min-w-[30%] text-center">What&apos;s worth living for?</h5>
-        <h6 className="text-m font-bold mt-4 w-full max-w-[35%] min-w-[25%] text-center">What&apos;s worth dying for?</h6>
-        <p className="text-s font-bold mt-4 w-full max-w-[25%] min-w-[15%] text-center">How do we exist among such pain?</p>
-        <p className="text-xs font-bold mt-4 w-full max-w-[15%] min-w-[8%] text-center">How do we go on?</p>
-        <p className="text-xs font-bold mt-4 w-full max-w-[8%] min-w-[5%] text-center">Will it ever stop?</p>
-      </div>
+        {/* Existential Crisis Section */}
+        <div className="flex flex-col items-center mt-10">
+          <h1 className="text-5xl font-bold mt-4 mb-10 w-full max-w-[80%] min-w-[70%] text-center">
+            This page doesn&apos;t exist.
+          </h1>
+          <h2 className="text-3xl font-bold mt-4 w-full max-w-[70%] min-w-[60%] text-center">
+            Does anything really exist?
+          </h2>
+          <h3 className="text-2xl font-bold mt-4 w-full max-w-[60%] min-w-[50%] text-center">
+            Do I even really exist?
+          </h3>
+          <h4 className="text-xl font-bold mt-4 w-full max-w-[50%] min-w-[40%] text-center">
+            Do you even really exist?
+          </h4>
+          <h5 className="text-l font-bold mt-4 w-full max-w-[35%] min-w-[30%] text-center">
+            What&apos;s worth living for?
+          </h5>
+          <h6 className="text-m font-bold mt-4 w-full max-w-[35%] min-w-[25%] text-center">
+            What&apos;s worth dying for?
+          </h6>
+          <p className="text-s font-bold mt-4 w-full max-w-[25%] min-w-[15%] text-center">
+            How do we exist among such pain?
+          </p>
+          <p className="text-xs font-bold mt-4 w-full max-w-[15%] min-w-[8%] text-center">
+            How do we go on?
+          </p>
+          <p className="text-xs font-bold mt-4 w-full max-w-[8%] min-w-[5%] text-center">
+            Will it ever stop?
+          </p>
+        </div>
 
         {/* Navigation */}
         <div className="flex flex-col items-center mt-10 text-gray-600 dark:text-gray-400">
@@ -44,7 +62,6 @@ export default function NotFound() {
               Who I am.
             </Link>
           </div>
-
         </div>
       </div>
     </div>

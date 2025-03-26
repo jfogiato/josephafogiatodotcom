@@ -13,17 +13,17 @@ export default function Home() {
       }}
     >
       <div className="flex flex-col items-center gap-3 ">
-      <Link href="/whoami">
-        <h1
-          className="text-center text-5xl font-bold drop-shadow-xl transition hover:text-gray-200 hover:scale-105 hover: hover:underline-offset-4"
-          style={{
-            animation: "jiggle 5s ease-in-out infinite",
-            animationIterationCount: "infinite",
-          }}
-        >
-          Joseph A. Fogiato.
-        </h1>
-      </Link>
+        <Link href="/whoami">
+          <h1
+            className="text-center text-5xl font-bold drop-shadow-xl transition hover:text-gray-200 hover:scale-105 hover: hover:underline-offset-4"
+            style={{
+              animation: "jiggle 5s ease-in-out infinite",
+              animationIterationCount: "infinite",
+            }}
+          >
+            Joseph A. Fogiato.
+          </h1>
+        </Link>
 
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-4 max-w-[80%]">
@@ -38,7 +38,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <LinkFooter/>
+      <LinkFooter />
     </div>
   );
 }

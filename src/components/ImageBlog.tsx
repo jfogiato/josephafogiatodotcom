@@ -12,7 +12,11 @@ interface BlogTemplateProps {
   href: string;
 }
 
-export default function BlogTemplate({ title, images, href }: BlogTemplateProps) {
+export default function BlogTemplate({
+  title,
+  images,
+  href,
+}: BlogTemplateProps) {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -21,15 +25,17 @@ export default function BlogTemplate({ title, images, href }: BlogTemplateProps)
         setFullscreenIndex(null);
       } else if (event.key === "ArrowRight") {
         setFullscreenIndex((prevIndex) =>
-          prevIndex !== null ? (prevIndex + 1) % images.length : 0
+          prevIndex !== null ? (prevIndex + 1) % images.length : 0,
         );
       } else if (event.key === "ArrowLeft") {
         setFullscreenIndex((prevIndex) =>
-          prevIndex !== null ? (prevIndex - 1 + images.length) % images.length : images.length - 1
+          prevIndex !== null
+            ? (prevIndex - 1 + images.length) % images.length
+            : images.length - 1,
         );
       }
     };
-  
+
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [fullscreenIndex, images.length]);
@@ -70,10 +76,12 @@ export default function BlogTemplate({ title, images, href }: BlogTemplateProps)
             className="absolute left-4 text-white/60 bg-black/40 p-2 rounded-full hover:bg-black/75 hover:text-white"
             onClick={(e) => {
               e.stopPropagation();
-              setFullscreenIndex((fullscreenIndex - 1 + images.length) % images.length);
+              setFullscreenIndex(
+                (fullscreenIndex - 1 + images.length) % images.length,
+              );
             }}
           >
-            <MoveLeftIcon/>
+            <MoveLeftIcon />
           </button>
 
           <Image
@@ -91,7 +99,7 @@ export default function BlogTemplate({ title, images, href }: BlogTemplateProps)
               setFullscreenIndex((fullscreenIndex + 1) % images.length);
             }}
           >
-            <MoveRightIcon/>
+            <MoveRightIcon />
           </button>
         </div>
       )}

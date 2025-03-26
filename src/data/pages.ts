@@ -1,4 +1,16 @@
-import { CroissantIcon, CableCarIcon, CrownIcon, PartyPopperIcon, SunriseIcon, WavesIcon, TreePalmIcon, ScanFaceIcon, BellIcon, FilmIcon, BinaryIcon } from "lucide-react";
+import {
+  CroissantIcon,
+  CableCarIcon,
+  CrownIcon,
+  PartyPopperIcon,
+  SunriseIcon,
+  WavesIcon,
+  TreePalmIcon,
+  ScanFaceIcon,
+  BellIcon,
+  FilmIcon,
+  BinaryIcon,
+} from "lucide-react";
 
 export const pages = [
   { href: "/film", icon: FilmIcon, label: "Film." },

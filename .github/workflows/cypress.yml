@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run Prettier (warn only)
+        run: |
+          echo "🧹 Checking formatting with Prettier..."
+          npx prettier --check . || echo "⚠️ Prettier formatting issues found. Continuing anyway..."
+
       - name: Start Next.js app
         run: npm run dev &
         env:
@@ -35,7 +40,7 @@ jobs:
         run: npm run test:e2e
 
   deploy:
-    needs: cypress-run  # ✅ Deployment only happens if Cypress tests pass
+    needs: cypress-run # ✅ Deployment only happens if Cypress tests pass
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
