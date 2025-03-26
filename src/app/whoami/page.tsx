@@ -55,20 +55,35 @@ export default function AboutMe() {
             rights. If it&apos;s oppressive, it&apos;s morally abhorrent.
           </p>
           <br />
-
-          <p className="ml-12 text-right relative inline-block">
-            I have a wonderful partner whom I cherish beyond measure, and an
-            insane{" "}
-            <span className="relative peer transition cursor-pointer">
-              tiny old man cat
+          
+          <p className="ml-12 text-right">
+            I have a{" "}
+            <span className="relative inline-block">
+              <span className="peer cursor-pointer transition hover:text-white text-white/90">
+                wonderful partner
+              </span>
+              <Image
+                src="/images/caro.png"
+                alt="Caroline"
+                width={120}
+                height={120}
+                className="absolute top-full left-[calc(100%-10rem)] rounded shadow-lg opacity-0 peer-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+              />
+            </span>{" "}
+            whom I cherish beyond measure, and an insane{" "}
+            <span className="relative inline-block">
+              <span className="peer cursor-pointer transition hover:text-white text-white/90">
+                tiny old man cat
+              </span>
+              <Image
+                src="/images/doc.png"
+                alt="Doc the cat"
+                width={120}
+                height={120}
+                className="absolute top-full left-[calc(100%-10rem)] rounded shadow-lg opacity-0 peer-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+              />
             </span>
-            <Image
-              src="/images/doc.png"
-              alt="Doc the cat"
-              width={120}
-              height={120}
-              className="absolute top-full left-[calc(100%-10rem)] rounded shadow-lg opacity-0 peer-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
-            />
+            .
           </p>
           <br />
 
