@@ -55,7 +55,6 @@ export default function AboutMe() {
             rights. If it&apos;s oppressive, it&apos;s morally abhorrent.
           </p>
           <br />
-          
           <p className="ml-12 text-right">
             I have a{" "}
             <span className="relative inline-block">
