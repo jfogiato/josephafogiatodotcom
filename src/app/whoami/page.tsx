@@ -58,7 +58,7 @@ export default function AboutMe() {
           <p className="ml-12 text-right">
             I have a{" "}
             <span className="relative inline-block">
-              <span className="peer cursor-pointer transition hover:text-white text-white/90">
+              <span className="peer cursor-pointer transition">
                 wonderful partner
               </span>
               <Image
@@ -71,7 +71,7 @@ export default function AboutMe() {
             </span>{" "}
             whom I cherish beyond measure, and an insane{" "}
             <span className="relative inline-block">
-              <span className="peer cursor-pointer transition hover:text-white text-white/90">
+              <span className="peer cursor-pointer transition">
                 tiny old man cat
               </span>
               <Image
