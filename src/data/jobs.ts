@@ -8,12 +8,12 @@ export const jobs = [
     filesAndLinks: [
       {
         path: "https://mannapa.org/tech-acceleration-project/",
-        description: "Tech Acceleration Project"
+        description: "Tech Acceleration Project",
       },
       {
         path: "https://www.linkedin.com/posts/joseph-fogiato_elixir-phoenix-activity-7307449098733850628-3tBr",
-        description: "fn (Software I built) -> Elixir + Phoenix end"
-      }
+        description: "fn (Software I built) -> Elixir + Phoenix end",
+      },
     ],
     responsibilities: [
       "Led org-wide tech strategy and daily IT ops for a 60-person non-profit.",
@@ -27,7 +27,7 @@ export const jobs = [
       'Oversaw a year long, $1m "Tech Acceleration Project" to streamline systems, build new software, and improve program offerings.',
       "Facilitated staff trainings on everything from security, to productivity, to AI, and more.",
       "Failed a lot. Learned even more.",
-    ]
+    ],
   },
   {
     organization: "Imperfect Foods",
@@ -38,8 +38,8 @@ export const jobs = [
     filesAndLinks: [
       {
         path: "/files/imperfect_foods_tribute.pdf",
-        description: "A thoughful sendoff from my team."
-      }
+        description: "A thoughful sendoff from my team.",
+      },
     ],
     responsibilities: [
       "Built internal tools to automate workflows and reduce food waste.",
@@ -49,7 +49,7 @@ export const jobs = [
       "Coordinated across teams to ensure data integrity, change management, and project success.",
       "Learned a lot about food waste, food systems, and the power of a good meal.",
       "Made some of the best friends of my life.",
-    ]
+    ],
   },
   {
     organization: "GNC",
@@ -66,7 +66,7 @@ export const jobs = [
       "Led launch of a GNC-exclusive brand that generated $3M in first two months; handled contracts, forecasting, marketing, and ops.",
       "Delivered weekly sales analyses summarizing promos, market trends, and performance across top and bottom line.",
       "Executed go-to-market strategies with vendors, focusing on exclusive and first-to-market products backed by industry data.",
-      "Collaborated cross-functionally to execute promos, training, new product development, and in-store brand experiences."
-    ]
+      "Collaborated cross-functionally to execute promos, training, new product development, and in-store brand experiences.",
+    ],
   },
-]
+];

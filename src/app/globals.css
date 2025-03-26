@@ -21,11 +21,22 @@ body {
 }
 
 @keyframes jiggle {
-  0%, 94% { transform: rotate(0deg); }
-  95% { transform: rotate(1deg); } 
-  97% { transform: rotate(-1deg); } 
-  99% { transform: rotate(1deg); }
-  100% { transform: rotate(0deg); }
+  0%,
+  94% {
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(1deg);
+  }
+  97% {
+    transform: rotate(-1deg);
+  }
+  99% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @media print {
@@ -47,7 +58,8 @@ body {
   }
 
   /* Force full width layout for printing */
-  html, body {
+  html,
+  body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -60,7 +72,8 @@ body {
   }
 
   /* Hide interactive elements */
-  button, a[href^="http"] {
+  button,
+  a[href^="http"] {
     text-decoration: none;
     color: black !important;
   }

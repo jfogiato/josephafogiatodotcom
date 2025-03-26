@@ -1,5 +1,4 @@
 describe("Work Page", () => {
-
   beforeEach(() => {
     cy.visit("/work");
   });
@@ -28,7 +27,9 @@ describe("Work Page", () => {
   });
 
   it("has correct education info", () => {
-    cy.contains("Turing School of Software & Design").should("have.attr", "href").and("include", "turing.edu");
+    cy.contains("Turing School of Software & Design")
+      .should("have.attr", "href")
+      .and("include", "turing.edu");
     cy.contains("The University of Pittsburgh").should("exist");
   });
 
@@ -41,22 +42,22 @@ describe("Work Page", () => {
   });
 
   it("renders file links with icons if available", () => {
-    cy.get("a").filter("[href$='.pdf'],[href$='.docx'],[href$='.txt']").each(($el) => {
-      cy.wrap($el).find("svg").should("exist");
-    });
+    cy.get("a")
+      .filter("[href$='.pdf'],[href$='.docx'],[href$='.txt']")
+      .each(($el) => {
+        cy.wrap($el).find("svg").should("exist");
+      });
   });
 
   it("calls window.print when Print / Save as PDF button is clicked", () => {
     cy.visit("/work");
-  
+
     cy.window().then((win) => {
       cy.stub(win, "print").as("printStub");
     });
-  
-    cy.contains("Print / Save as PDF")
-      .should("be.visible")
-      .click();
-  
+
+    cy.contains("Print / Save as PDF").should("be.visible").click();
+
     cy.get("@printStub").should("have.been.calledOnce");
   });
 });

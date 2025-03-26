@@ -2,20 +2,17 @@
 
 This is my personal website built with **Next.js** & **Tailwind CSS**, deployed on **Vercel**. It showcases my work in **photography, software projects, and other creative pursuits**.
 
-
 ## Live Site
-🔗 **[fogiato.com](https://fogiato.com)**  
 
-
+🔗 **[fogiato.com](https://fogiato.com)**
 
 ## Features
-- **Minimalist Design** → Clean, responsive UI with dark mode support.  
-- **Photography Portfolio** → Browse photos from my travels & projects.  
-- **Software Projects** → Expandable sections with GIFs & links to GitHub repos.  
-- **Floating Bug Report Button** → Report issues & request features directly in GitHub.  
-- **Global Navigation** → Dynamic page links with smooth transitions.  
 
-
+- **Minimalist Design** → Clean, responsive UI with dark mode support.
+- **Photography Portfolio** → Browse photos from my travels & projects.
+- **Software Projects** → Expandable sections with GIFs & links to GitHub repos.
+- **Floating Bug Report Button** → Report issues & request features directly in GitHub.
+- **Global Navigation** → Dynamic page links with smooth transitions.
 
 ## Getting Started
 
@@ -37,7 +34,6 @@ npm run dev
 
 Then open **[localhost:3000](http://localhost:3000)** in your browser.
 
-
 ## 📂 Project Structure
 
 ```
@@ -58,8 +54,6 @@ Then open **[localhost:3000](http://localhost:3000)** in your browser.
  ├── next.config.ts          # Next.js configuration
 ```
 
-
-
 ## 📦 Built With
 
 - **[Next.js](https://nextjs.org/)**
@@ -67,10 +61,9 @@ Then open **[localhost:3000](http://localhost:3000)** in your browser.
 - **[Lucide Icons](https://lucide.dev/)**
 - **[Vercel](https://vercel.com/)**
 
-
 ## 🚀 Deploying
 
-This site is deployed automatically via **Vercel**.  
+This site is deployed automatically via **Vercel**.
 
 To build for production locally:
 
@@ -84,9 +77,7 @@ Then run:
 npm start
 ```
 
-
 ## 🐛 Reporting Bugs & Feature Requests
 
 Found a bug? Have a feature idea? **Click the floating bug icon** 🐞 at the bottom-right of any page, or submit directly:  
-🔗 **[GitHub Issues](https://github.com/jfogiato/josephafogiatodotcom/issues)**  
-
+🔗 **[GitHub Issues](https://github.com/jfogiato/josephafogiatodotcom/issues)**

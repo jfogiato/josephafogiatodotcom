@@ -35,7 +35,7 @@ jobs:
         run: npm run test:e2e
 
   deploy:
-    needs: cypress-run  # ✅ Deployment only happens if Cypress tests pass
+    needs: cypress-run # ✅ Deployment only happens if Cypress tests pass
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:

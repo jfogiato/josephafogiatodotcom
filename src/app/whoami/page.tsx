@@ -32,13 +32,17 @@ export default function AboutMe() {
         {/* About Me Text */}
         <div className="flex flex-col text-lg text-gray-700 dark:text-gray-300 mt-8">
           <p className="ml-0">
-            Joseph A. Fogiato <i>(/fudge-auto/)</i>, but it&apos;s just &quot;Joe&quot;.
+            Joseph A. Fogiato <i>(/fudge-auto/)</i>, but it&apos;s just
+            &quot;Joe&quot;.
           </p>
           <br />
 
           <p className="ml-6">
             I&apos;ve had a few careers but currently work at{" "}
-            <a href="https://mannapa.org/" className="opacity-90 hover:opacity-100 transition">
+            <a
+              href="https://mannapa.org/"
+              className="opacity-90 hover:opacity-100 transition"
+            >
               MANNA,
             </a>{" "}
             where I direct all things tech.
@@ -46,24 +50,29 @@ export default function AboutMe() {
           <br />
 
           <p className="ml-12 text-right">
-            I am an unapologetic humanist who believes that healthcare, repro freedom, queer rights, food, shelter, and
-            human connection are human rights. If it&apos;s oppressive, it&apos;s morally abhorrent.
+            I am an unapologetic humanist who believes that healthcare, repro
+            freedom, queer rights, food, shelter, and human connection are human
+            rights. If it&apos;s oppressive, it&apos;s morally abhorrent.
           </p>
           <br />
 
           <p className="ml-12 text-right">
-            I have a wonderful partner whom I cherish beyond measure, and an insane tiny old man cat.
+            I have a wonderful partner whom I cherish beyond measure, and an
+            insane tiny old man cat.
           </p>
           <br />
 
           <p className="ml-6 text-right">
-            When I&apos;m not at work, you can find me taking photos, doing yoga, <span>TRANSCENDING&trade;</span>,
-            communing with friends, 3D printing, riding motorcycles, getting involved in mutual aid, or playing Fallout 4.
+            When I&apos;m not at work, you can find me taking photos, doing
+            yoga, <span>TRANSCENDING&trade;</span>, communing with friends, 3D
+            printing, riding motorcycles, getting involved in mutual aid, or
+            playing Fallout 4.
           </p>
           <br />
 
           <p className="ml-0">
-            I truly love connecting with new people – email me or find me on social media. Let&apos;s do some good together.
+            I truly love connecting with new people – email me or find me on
+            social media. Let&apos;s do some good together.
           </p>
           <br />
         </div>

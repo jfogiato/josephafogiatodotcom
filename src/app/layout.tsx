@@ -10,9 +10,8 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-
   title: "Joseph A. Fogiato Dot Com",
-  description: "Very weird.", 
+  description: "Very weird.",
 
   openGraph: {
     title: "Joseph A. Fogiato",
@@ -36,7 +35,13 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
 
-  keywords: ["Joseph Fogiato", "software", "photography", "Philadelphia", "developer"],
+  keywords: [
+    "Joseph Fogiato",
+    "software",
+    "photography",
+    "Philadelphia",
+    "developer",
+  ],
   authors: [{ name: "Joseph Fogiato", url: "https://fogiato.com" }],
   creator: "Joseph A. Fogiato",
   robots: {
