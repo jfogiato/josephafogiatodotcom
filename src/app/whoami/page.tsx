@@ -57,11 +57,11 @@ export default function AboutMe() {
           <br />
 
           <p className="ml-12 text-right relative inline-block">
-            I have a wonderful partner whom I cherish beyond measure, and an insane{" "}
+            I have a wonderful partner whom I cherish beyond measure, and an
+            insane{" "}
             <span className="relative peer text-white/90 hover:text-white transition cursor-pointer">
               tiny old man cat
             </span>
-
             <Image
               src="/images/doc.png"
               alt="Doc the cat"
