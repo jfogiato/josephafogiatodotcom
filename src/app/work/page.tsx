@@ -12,9 +12,14 @@ export default function WorkPage() {
     <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-black dark:text-white p-8">
       <Header currentPath="/work" pages={pages} />
 
-      <h1 className="text-4xl sm:text-5xl font-bold text-center my-10">
-        Joseph A. Fogiato
-      </h1>
+      <div className="font-bold text-center my-5">
+        <h1 className="text-4xl sm:text-5xl">
+          Joseph A. Fogiato
+        </h1>
+        <h2 className="text-l sm:text-xl italic mt-2">
+          Philadelphia, PA
+        </h2>
+      </div>
 
       {/* Main Section */}
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -33,7 +38,7 @@ export default function WorkPage() {
             </p>
             <br/>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              I don't think titles are entirely relevant, but my mose recent one is "Senior
+              I don&apos;t think titles are entirely relevant, but my most recent one is "Senior
               Manager of Technology and Continuous Improvement".
             </p>
           </section>
@@ -46,7 +51,7 @@ export default function WorkPage() {
             
             {/* Technical Skills */}
             <div className="mb-4">
-              <h3 className="text-lg font-medium mb-2">Technical Skills</h3>
+              <h3 className="text-m font-small mb-2">Technical Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {techTiersAndSkills.flatMap(tier => 
                   tier.technologies.map(({ name, icon: Icon, techUrl }) => (
@@ -67,7 +72,7 @@ export default function WorkPage() {
 
             {/* Soft Skills */}
             <div>
-              <h3 className="text-lg font-medium mb-2">Soft Skills</h3>
+              <h3 className="text-m font-small mb-2">Soft Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {['Communicating change.', 'Helping others understand the mental model.', 'Relentless problem solving.',
                 'Persisting through ambiguity.', 'Stakeholder management.', 'Building trust and consensus.', 'Asking the right questions.',

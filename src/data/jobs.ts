@@ -45,7 +45,7 @@ export const jobs = [
       "Built internal tools to automate workflows and reduce food waste.",
       "Created demand forecasting models using SQL + Sheets.",
       "Built out reporting dashboards, business reviews, and ad-hoc analyses using Mode, Snowflake, and Google Sheets.",
-      "Discovered a deep love for using technology to make tools that make people&apos;s lives easier.",
+      "Discovered a deep love for using technology to make tools that make people's lives easier.",
       "Coordinated across teams to ensure data integrity, change management, and project success.",
       "Learned a lot about food waste, food systems, and the power of a good meal.",
       "Made some of the best friends of my life.",
@@ -61,7 +61,7 @@ export const jobs = [
     responsibilities: [
       "Managed open-to-buy dollars in a $300M category — 25% of total business — balancing inventory against sales goals and product pipeline.",
       "Owned vendor relationships: negotiated contracts, coordinated launches, planned events, and optimized SKU assortment.",
-      "Planned and merchandised a one-of-a-kind &apos;Lab Store centered on customer experience and modern retail behavior.",
+      "Planned and merchandised a one-of-a-kind Lab Store centered on customer experience and modern retail behavior.",
       "Analyzed and managed full P&L: tracked margins, sales, and inventory turn against budgets and forecasts to enable fast pivots.",
       "Led launch of a GNC-exclusive brand that generated $3M in first two months; handled contracts, forecasting, marketing, and ops.",
       "Delivered weekly sales analyses summarizing promos, market trends, and performance across top and bottom line.",
