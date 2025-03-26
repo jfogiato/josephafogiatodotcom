@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run Prettier (warn only)
+        run: |
+          echo "🧹 Checking formatting with Prettier..."
+          npx prettier --check . || echo "⚠️ Prettier formatting issues found. Continuing anyway..."
+
       - name: Start Next.js app
         run: npm run dev &
         env:
