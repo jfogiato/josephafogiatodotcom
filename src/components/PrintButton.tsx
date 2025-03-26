@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function PrintButton() {
   const printPage = () => {
     window.print();

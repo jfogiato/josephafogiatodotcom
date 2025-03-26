@@ -40,8 +40,8 @@ export default function WorkPage() {
             </p>
             <br/>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              I don&apos;t think titles are entirely relevant, but my most recent one is "Senior
-              Manager of Technology and Continuous Improvement".
+              I don&apos;t think titles are entirely relevant, but my most recent one is `&quot;`Senior
+              Manager of Technology and Continuous Improvement`&quot;`.
             </p>
           </section>
 
@@ -146,7 +146,12 @@ export default function WorkPage() {
               {jobs.map((job, index) => (
                 <div key={index}>
                   <div className="flex items-center gap-2">
-                    <img src={job.logo} alt={`${job.organization} Logo`} className="h-5" />
+                  <Image
+                    src={job.logo}
+                    alt={`${job.organization} Logo`}
+                    width={30}
+                    height={30}
+                  />
                     <h3 className="font-semibold text-lg">
                       <Link href={job.link} className="hover:underline">
                         {job.organization}
