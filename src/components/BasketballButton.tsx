@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 interface Shot {
   id: number;
@@ -23,9 +23,12 @@ export default function BasketballButton() {
 
     setShots((prev) => [...prev, { id, arcHeight, missX, duration }]);
 
-    setTimeout(() => {
-      setShots((prev) => prev.filter((s) => s.id !== id));
-    }, parseFloat(duration) * 1000 + 500);
+    setTimeout(
+      () => {
+        setShots((prev) => prev.filter((s) => s.id !== id));
+      },
+      parseFloat(duration) * 1000 + 500,
+    );
   };
 
   return (
@@ -43,12 +46,14 @@ export default function BasketballButton() {
         <div
           key={id}
           className="fixed left-1/2 transform -translate-x-1/2 pointer-events-none"
-          style={{
-            top: '40vh', 
-            '--arc-height': arcHeight,
-            '--miss-x': missX,
-            '--duration': duration,
-          } as React.CSSProperties}
+          style={
+            {
+              top: "40vh",
+              "--arc-height": arcHeight,
+              "--miss-x": missX,
+              "--duration": duration,
+            } as React.CSSProperties
+          }
         >
           <Image
             src="/images/basketball.png"
