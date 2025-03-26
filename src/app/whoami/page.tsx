@@ -59,7 +59,7 @@ export default function AboutMe() {
           <p className="ml-12 text-right relative inline-block">
             I have a wonderful partner whom I cherish beyond measure, and an
             insane{" "}
-            <span className="relative peer text-white/90 hover:text-white transition cursor-pointer">
+            <span className="relative peer transition cursor-pointer">
               tiny old man cat
             </span>
             <Image
