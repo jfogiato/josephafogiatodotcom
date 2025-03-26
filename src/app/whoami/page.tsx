@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import { pages } from "@/data/pages";
+import { LayoutListIcon } from "lucide-react";
 
 export default function AboutMe() {
   return (
@@ -65,6 +67,16 @@ export default function AboutMe() {
           </p>
           <br />
         </div>
+      </div>
+
+      <div id="work">
+        <Link
+          href="/work"
+          className="flex items-center gap-2 text-l font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-black dark:hover:text-white transition"
+        >
+          <LayoutListIcon className="w-5 h-5" />
+          Work History, Skills, Extras, etc.
+        </Link>
       </div>
     </div>
   );
