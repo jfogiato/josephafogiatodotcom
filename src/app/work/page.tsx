@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import PrintButton from "@/components/PrintButton";
 import { techTiersAndSkills } from "@/data/technologies";
 import { pages } from "@/data/pages";
 import { jobs } from "@/data/jobs";
@@ -8,6 +9,7 @@ import Image from "next/image";
 import { FileIcon } from "lucide-react";
 
 export default function WorkPage() {
+
   return (
     <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-black dark:text-white p-8">
       <Header currentPath="/work" pages={pages} />
@@ -163,7 +165,7 @@ export default function WorkPage() {
                   </ul>
 
                   {job.filesAndLinks && job.filesAndLinks.length > 0 && (
-                    <div className="mt-3 pl-5 space-y-1">
+                    <div className="mt-3 pl-5 space-y-1 no-print">
                       {job.filesAndLinks.map((file, j) => (
                         <a
                           key={j}
@@ -185,7 +187,8 @@ export default function WorkPage() {
         </div>
         
       </div>
-      
+
+      <PrintButton />
     </div>
   );
 }
