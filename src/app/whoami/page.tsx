@@ -56,9 +56,19 @@ export default function AboutMe() {
           </p>
           <br />
 
-          <p className="ml-12 text-right">
-            I have a wonderful partner whom I cherish beyond measure, and an
-            insane tiny old man cat.
+          <p className="ml-12 text-right relative inline-block">
+            I have a wonderful partner whom I cherish beyond measure, and an insane{" "}
+            <span className="relative peer text-white/90 hover:text-white transition cursor-pointer">
+              tiny old man cat
+            </span>
+
+            <Image
+              src="/images/doc.png"
+              alt="Doc the cat"
+              width={120}
+              height={120}
+              className="absolute top-full left-[calc(100%-10rem)] rounded shadow-lg opacity-0 peer-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+            />
           </p>
           <br />
 
