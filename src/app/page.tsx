@@ -27,7 +27,7 @@ export default function Home() {
         </Link>
 
         {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 max-w-full sm:max-w-[75%]">
+        <div className="flex flex-wrap justify-center gap-4 max-w-full sm:max-w-[80%]">
           {pages.map(({ href, icon: Icon, label, group }) => (
             <Link key={href} href={href} className="relative group">
               <Icon
