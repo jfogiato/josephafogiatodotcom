@@ -11,6 +11,7 @@ import {
   FilmIcon,
   BinaryIcon,
   BirdIcon,
+  NotebookPenIcon,
 } from "lucide-react";
 
 export const pages = [
@@ -24,6 +25,7 @@ export const pages = [
   { href: "/hawaii", icon: TreePalmIcon, label: "Hawaii." },
   { href: "/faces", icon: ScanFaceIcon, label: "Faces." },
   { href: "/philly", icon: BellIcon, label: "Philly." },
-  { href: "/software", icon: BinaryIcon, label: "Software." },
   { href: "/go_birds", icon: BirdIcon, label: "Go Birds." },
+  { href: "/software", icon: BinaryIcon, label: "Software." },
+  { href: "/blog", icon: NotebookPenIcon, label: "Blog." },
 ];
