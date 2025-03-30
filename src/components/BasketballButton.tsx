@@ -36,9 +36,13 @@ export default function BasketballButton() {
       <div className="flex flex-col items-center justify-center mt-10">
         <button
           onClick={handleShoot}
-          className="mt-4 px-4 py-2 text-sm font-medium rounded backdrop-blur-sm hover:bg-white hover:text-black transition"
         >
-          Shoot your shot.
+          <Image
+            src="/images/basketball.png"
+            alt="Basketball"
+            width={50}
+            height={50}
+          />
         </button>
       </div>
 
