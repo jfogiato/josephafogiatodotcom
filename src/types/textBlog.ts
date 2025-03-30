@@ -1,4 +1,4 @@
-export interface BlogType {
+export interface TextBlogType {
   id: string;
   title: string;
   description: string;

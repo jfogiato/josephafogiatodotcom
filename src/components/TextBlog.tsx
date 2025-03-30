@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BlogType } from "@/types/textBlog";
-import { HomeModernIcon, ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
+import { TextBlogType } from "@/types/TextBlog";
+import {
+  HomeModernIcon,
+  ArrowUturnLeftIcon,
+} from "@heroicons/react/24/outline";
 
-export default function TextBlog({ blog }: { blog: BlogType }) {
+export default function TextBlog({ blog }: { blog: TextBlogType }) {
   return (
     <div className="relative max-w-4xl mx-auto px-6 py-12 text-black dark:text-white">
-      
       {/* Top Navigation Buttons */}
       <div className="absolute top-4 left-4 right-4 flex justify-between">
         {/* Home Button */}
@@ -49,11 +51,11 @@ export default function TextBlog({ blog }: { blog: BlogType }) {
       <div className="prose prose-neutral dark:prose-invert max-w-none">
         {blog.body.map((section, i) => (
           <div key={i} className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">{section.subtitle}</h2>
-        <div 
-          dangerouslySetInnerHTML={{ __html: section.content }}
-          className="prose-p:my-4"
-        />
+            <h2 className="text-2xl font-semibold mb-2">{section.subtitle}</h2>
+            <div
+              dangerouslySetInnerHTML={{ __html: section.content }}
+              className="prose-p:my-4"
+            />
           </div>
         ))}
       </div>

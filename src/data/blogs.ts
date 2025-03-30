@@ -9,8 +9,7 @@ export const blogs = [
     body: [
       {
         subtitle: "Introduction",
-        content: 
-          `<p class="mb-4">
+        content: `<p class="mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
@@ -21,15 +20,17 @@ export const blogs = [
             <li>Duis aute irure dolor in reprehenderit</li>
             <li>Excepteur sint occaecat cupidatat non proident</li>
           </ul>`,
-      }, 
+      },
       {
         subtitle: "Getting Started",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
       {
         subtitle: "Conclusion",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-    ]
+    ],
   },
 ];

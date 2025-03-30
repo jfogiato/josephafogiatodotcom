@@ -7,7 +7,7 @@ import { pages } from "@/data/pages";
 export default function BlogPage() {
   return (
     <div className="min-h-screen p-8 bg-white text-black dark:bg-black dark:text-white">
-      <Header currentPath="/blog" pages={pages}/>
+      <Header currentPath="/blog" pages={pages} />
       <h1 className="text-4xl font-bold mb-10 text-center">Blog.</h1>
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -32,11 +32,11 @@ export default function BlogPage() {
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                 {new Date(blog.date).toLocaleDateString()}
               </p>
-                <p className="mt-2 text-gray-800 dark:text-gray-200 text-sm">
+              <p className="mt-2 text-gray-800 dark:text-gray-200 text-sm">
                 {blog.description.length > 150
                   ? `${blog.description.substring(0, 150)}...`
                   : blog.description}
-                </p>
+              </p>
             </div>
           </Link>
         ))}

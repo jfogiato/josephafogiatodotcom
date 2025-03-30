@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { PiBasketball } from "react-icons/pi";
 
 interface Shot {
   id: number;
@@ -34,15 +35,8 @@ export default function BasketballButton() {
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-10">
-        <button
-          onClick={handleShoot}
-        >
-          <Image
-            src="/images/basketball.png"
-            alt="Basketball"
-            width={50}
-            height={50}
-          />
+        <button onClick={handleShoot}>
+          <PiBasketball className="text-4xl transition-transform duration-200 hover:scale-110" />
         </button>
       </div>
 
