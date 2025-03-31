@@ -1,10 +1,34 @@
-import Link from "next/link";
-import Image from "next/image";
-import { blogs } from "@/data/blogs";
-import Header from "@/components/Header";
-import { pages } from "@/data/pages";
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/components/Header';
+import { pages } from '@/data/pages';
 
-export default function BlogPage() {
+interface BlogMeta {
+  title: string;
+  description: string;
+  date: string;
+  image: string;
+  slug: string;
+}
+
+export default async function BlogPage() {
+  const blogDir = path.join(process.cwd(), 'src/content/blog');
+  const files = fs.readdirSync(blogDir).filter((file) => file.endsWith('.mdx'));
+
+  const blogs: BlogMeta[] = await Promise.all(
+    files.map(async (file) => {
+      const slug = file.replace(/\.mdx$/, '');
+      const { metadata } = await import(`@/content/blog/${slug}.mdx`);
+
+      return {
+        ...metadata,
+        slug,
+      };
+    })
+  );
+
   return (
     <div className="min-h-screen p-8 bg-white text-black dark:bg-black dark:text-white">
       <Header currentPath="/blog" pages={pages} />
@@ -13,8 +37,8 @@ export default function BlogPage() {
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
           <Link
-            href={`/blog/${blog.id}`}
-            key={blog.id}
+            href={`/blog/${blog.slug}`}
+            key={blog.slug}
             className="group block rounded overflow-hidden shadow-lg hover:shadow-2xl transition dark:shadow-zinc-800 dark:hover:shadow-zinc-600"
           >
             <div className="relative w-full h-48">
