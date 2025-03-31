@@ -2,7 +2,7 @@ import BlogTemplate from "@/components/ImageBlog";
 
 const filmImages = Array.from(
   { length: 63 },
-  (_, i) => `/images/film${i + 1}.jpg`,
+  (_, i) => `/images/photography/film${i + 1}.jpg`,
 );
 
 export default function FilmPage() {

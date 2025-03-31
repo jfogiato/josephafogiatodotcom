@@ -16,7 +16,7 @@ export default function AboutMe() {
         <div className="flex justify-center mb-6">
           <div className="w-[70vw] max-w-[500px]">
             <Image
-              src="/images/me1.JPG"
+              src="/images/misc/me1.JPG"
               alt="Joseph A. Fogiato"
               width={600}
               height={600}
@@ -62,7 +62,7 @@ export default function AboutMe() {
                 wonderful partner
               </span>
               <Image
-                src="/images/caro.png"
+                src="/images/misc/caro.png"
                 alt="Caroline"
                 width={120}
                 height={120}
@@ -75,7 +75,7 @@ export default function AboutMe() {
                 tiny old man cat
               </span>
               <Image
-                src="/images/doc.png"
+                src="/images/misc/doc.png"
                 alt="Doc the cat"
                 width={120}
                 height={120}

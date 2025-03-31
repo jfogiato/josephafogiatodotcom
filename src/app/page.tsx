@@ -8,7 +8,7 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-between min-h-screen p-8 sm:p-5 text-white"
       style={{
-        backgroundImage: "url(/images/basketball_film.jpg)",
+        backgroundImage: "url(/images/photography/basketball_film.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center 45%",
       }}

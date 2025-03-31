@@ -1,7 +1,7 @@
 export const extras = [
   {
     organization: "The Community Grocer",
-    image: "/images/tcg_logo.png",
+    image: "/images/work_logos/tcg_logo.png",
     link: "https://www.thecommunitygrocer.org/meet-our-senior-advisors#:~:text=of%20his%20life.-,Joseph%20Fogiato,-Driven%20by%20The",
     role: "Senior Advisor",
     description:
@@ -9,7 +9,7 @@ export const extras = [
   },
   {
     organization: "Big Brothers Big Sisters",
-    image: "/images/bbbs_logo.png",
+    image: "/images/work_logos/bbbs_logo.png",
     link: "https://www.independencebigs.org/",
     role: "Big Brother",
     description:
@@ -17,7 +17,7 @@ export const extras = [
   },
   {
     organization: "ARTZ Philadelphia",
-    image: "/images/artz_logo.png",
+    image: "/images/work_logos/artz_logo.png",
     link: "https://www.artzphilly.org/",
     role: "Volunteer",
     description:
@@ -25,7 +25,7 @@ export const extras = [
   },
   {
     organization: "Double Trellis",
-    image: "/images/double_trellis_logo.png",
+    image: "/images/work_logos/double_trellis_logo.png",
     link: "https://www.doubletrellis.org/",
     role: "Volunteer",
     description:

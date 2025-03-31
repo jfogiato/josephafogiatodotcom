@@ -2,7 +2,7 @@ import BlogTemplate from "@/components/ImageBlog";
 
 const mummersImages = Array.from(
   { length: 18 },
-  (_, i) => `/images/mummers${i + 1}.jpg`,
+  (_, i) => `/images/photography/mummers${i + 1}.jpg`,
 );
 
 export default function MummersPage() {

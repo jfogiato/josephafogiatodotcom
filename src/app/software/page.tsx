@@ -70,9 +70,9 @@ export default function SoftwarePage() {
               title="Do Something."
               description="A web app for finding things to do."
               images={[
-                "/images/dosomething1.gif",
-                "/images/dosomething2.gif",
-                "/images/dosomething3.gif",
+                "/images/software/dosomething1.gif",
+                "/images/software/dosomething2.gif",
+                "/images/software/dosomething3.gif",
               ]}
               githubUrl="https://github.com/jfogiato/do-something"
               liveUrl="https://cmon-do-something.vercel.app/"
@@ -82,9 +82,9 @@ export default function SoftwarePage() {
               title="Collabria"
               description="The AI TA."
               images={[
-                "/images/collabria1.gif",
-                "/images/collabria2.gif",
-                "/images/collabria3.gif",
+                "/images/software/collabria1.gif",
+                "/images/software/collabria2.gif",
+                "/images/software/collabria3.gif",
               ]}
               githubUrl="https://github.com/jfogiato/collabria-fe"
               liveUrl="https://collabria.vercel.app/"
@@ -94,9 +94,9 @@ export default function SoftwarePage() {
               title="Grand Budapest Hotel"
               description="A client management system fit for a Wes Anderson flick. Vanilla JS."
               images={[
-                "/images/gbh1.gif",
-                "/images/gbh2.gif",
-                "/images/gbh3.gif",
+                "/images/software/gbh1.gif",
+                "/images/software/gbh2.gif",
+                "/images/software/gbh3.gif",
               ]}
               githubUrl="https://github.com/jfogiato/overlook"
               liveUrl="https://jfogiato.github.io/overlook/"
