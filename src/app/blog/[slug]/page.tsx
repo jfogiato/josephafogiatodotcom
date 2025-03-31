@@ -1,3 +1,8 @@
+import Link from "next/link";
+import Image from "next/image";
+import { HomeModernIcon } from "@heroicons/react/24/outline";
+import { Undo2Icon } from "lucide-react";
+
 export function generateStaticParams() {
   const fs = require("fs");
   const path = require("path");
@@ -12,24 +17,59 @@ export function generateStaticParams() {
     }));
 }
 
-export default async function Page({
+export const dynamicParams = false;
+
+export default async function BlogPostPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const post = await import(`@/content/blog/${params.slug}.mdx`);
-  const Post = post.default;
-  const metadata = post.metadata;
+  const { default: Post, metadata } = await import(
+    `@/content/blog/${params.slug}.mdx`
+  );
 
   return (
-    <div className="prose dark:prose-invert mx-auto p-6">
+    <div className="max-w-4xl mx-auto px-6 py-12 text-black dark:text-white">
+      {/* Top nav */}
+      <div className="mb-6 flex justify-between items-center">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-sm hover:text-gray-300 text-black dark:text-white"
+        >
+          <HomeModernIcon className="w-6 h-6" />
+        </Link>
+
+        <Link
+          href="/blog"
+          className="text-sm hover:text-gray-300 text-black dark:text-white"
+        >
+          <Undo2Icon className="w-6 h-6" />
+        </Link>
+      </div>
+
+      {/* Title and Meta */}
       <h1 className="text-4xl font-bold mb-2">{metadata.title}</h1>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
         {new Date(metadata.date).toLocaleDateString()}
       </p>
-      <Post />
+
+      {/* Featured Image */}
+      {metadata.image && (
+        <div className="w-full h-64 relative mb-8">
+          <Image
+            src={metadata.image}
+            alt={metadata.title}
+            fill
+            className="rounded-xl object-cover"
+            priority
+          />
+        </div>
+      )}
+
+      {/* MDX Body */}
+      <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <Post />
+      </div>
     </div>
   );
 }
-
-export const dynamicParams = false;

@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-import Image from 'next/image';
-import Header from '@/components/Header';
-import { pages } from '@/data/pages';
+import fs from "fs";
+import path from "path";
+import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/Header";
+import { pages } from "@/data/pages";
 
 interface BlogMeta {
   title: string;
@@ -14,19 +14,19 @@ interface BlogMeta {
 }
 
 export default async function BlogPage() {
-  const blogDir = path.join(process.cwd(), 'src/content/blog');
-  const files = fs.readdirSync(blogDir).filter((file) => file.endsWith('.mdx'));
+  const blogDir = path.join(process.cwd(), "src/content/blog");
+  const files = fs.readdirSync(blogDir).filter((file) => file.endsWith(".mdx"));
 
   const blogs: BlogMeta[] = await Promise.all(
     files.map(async (file) => {
-      const slug = file.replace(/\.mdx$/, '');
+      const slug = file.replace(/\.mdx$/, "");
       const { metadata } = await import(`@/content/blog/${slug}.mdx`);
 
       return {
         ...metadata,
         slug,
       };
-    })
+    }),
   );
 
   return (
