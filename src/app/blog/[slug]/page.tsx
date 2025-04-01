@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { HomeModernIcon } from "@heroicons/react/24/outline";
 import { Undo2Icon } from "lucide-react";
+import fs from "fs";
+import path from "path";
+import { calculateReadTime } from "@/utils/readTime";
 
 export function generateStaticParams() {
-  const fs = require("fs");
-  const path = require("path");
-
   const dir = path.join(process.cwd(), "src/content/blog");
   const files = fs.readdirSync(dir);
 
@@ -27,6 +27,17 @@ export default async function BlogPostPage({
   const { default: Post, metadata } = await import(
     `@/content/blog/${params.slug}.mdx`
   );
+
+  // Read raw content to calculate read time
+  const filePath = path.join(
+    process.cwd(),
+    "src/content/blog",
+    `${params.slug}.mdx`,
+  );
+  const rawContent = fs.readFileSync(filePath, "utf-8");
+
+  // Calculate and inject
+  const readTime = calculateReadTime(rawContent);
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 text-black dark:text-white">
@@ -50,12 +61,12 @@ export default async function BlogPostPage({
       {/* Title and Meta */}
       <h1 className="text-4xl font-bold mb-2">{metadata.title}</h1>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-        {new Date(metadata.date).toLocaleDateString()}
+        {new Date(metadata.date).toLocaleDateString()} · {readTime}
       </p>
 
       {/* Featured Image */}
       {metadata.image && (
-        <div className="w-full h-64 relative mb-8">
+        <div className="w-full h-72 relative mb-8">
           <Image
             src={metadata.image}
             alt={metadata.title}

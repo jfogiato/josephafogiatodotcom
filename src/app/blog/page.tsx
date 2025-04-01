@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { pages } from "@/data/pages";
+import { calculateReadTime } from "@/utils/readTime";
 
 interface BlogMeta {
   title: string;
@@ -11,6 +12,7 @@ interface BlogMeta {
   date: string;
   image: string;
   slug: string;
+  readTime: string;
 }
 
 export default async function BlogPage() {
@@ -20,11 +22,16 @@ export default async function BlogPage() {
   const blogs: BlogMeta[] = await Promise.all(
     files.map(async (file) => {
       const slug = file.replace(/\.mdx$/, "");
+      const filePath = path.join(blogDir, file);
+
+      // Load metadata from MDX file
       const { metadata } = await import(`@/content/blog/${slug}.mdx`);
+      const rawContent = fs.readFileSync(filePath, "utf-8");
 
       return {
         ...metadata,
         slug,
+        readTime: calculateReadTime(rawContent),
       };
     }),
   );
@@ -54,7 +61,7 @@ export default async function BlogPage() {
                 {blog.title}
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                {new Date(blog.date).toLocaleDateString()}
+                {new Date(blog.date).toLocaleDateString()} · {blog.readTime}
               </p>
               <p className="mt-2 text-gray-800 dark:text-gray-200 text-sm">
                 {blog.description.length > 150
