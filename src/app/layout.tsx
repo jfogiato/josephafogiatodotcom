@@ -10,6 +10,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fogiato.com"),
   title: "Joseph A. Fogiato Dot Com",
   description: "Very weird.",
 
@@ -47,10 +48,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
   },
   icons: {
     icon: "/favicon.ico",

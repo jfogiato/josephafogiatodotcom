@@ -22,21 +22,15 @@ export const dynamicParams = false;
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   const { default: Post, metadata } = await import(
-    `@/content/blog/${params.slug}.mdx`
+    `@/content/blog/${slug}.mdx`
   );
 
-  // Read raw content to calculate read time
-  const filePath = path.join(
-    process.cwd(),
-    "src/content/blog",
-    `${params.slug}.mdx`,
-  );
+  const filePath = path.join(process.cwd(), "src/content/blog", `${slug}.mdx`);
   const rawContent = fs.readFileSync(filePath, "utf-8");
-
-  // Calculate and inject
   const readTime = calculateReadTime(rawContent);
 
   return (

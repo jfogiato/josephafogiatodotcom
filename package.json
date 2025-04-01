@@ -11,7 +11,8 @@
     "test:e2e:open": "cypress open",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepush": "npm run test:e2e && npm run format && npm run lint"
+    "typecheck": "tsc --noEmit",
+    "prepush": "npm run test:e2e && npm run format && npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -21,7 +22,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/mdx": "^2.0.13",
     "lucide-react": "^0.474.0",
-    "next": "15.1.6",
+    "next": "^15.2.4",
     "postcss": "^8.5.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
