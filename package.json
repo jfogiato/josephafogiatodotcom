@@ -10,7 +10,8 @@
     "test:e2e": "cypress run",
     "test:e2e:open": "cypress open",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepush": "npm run test:e2e && npm run format && npm run lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
