@@ -8,9 +8,9 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-between min-h-screen p-8 sm:p-5 text-white"
       style={{
-        backgroundImage: "url(/images/basketball_film.jpg)",
+        backgroundImage: "url(/images/photography/basketball_film.jpg)",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center 45%",
       }}
     >
       <div className="flex flex-col items-center gap-3 ">
@@ -27,11 +27,16 @@ export default function Home() {
         </Link>
 
         {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 max-w-[80%]">
-          {pages.map(({ href, icon: Icon, label }) => (
+        <div className="flex flex-wrap justify-center gap-4 max-w-full sm:max-w-[80%]">
+          {pages.map(({ href, icon: Icon, label, group }) => (
             <Link key={href} href={href} className="relative group">
-              <Icon className="w-8 h-8 group-hover:scale-110 transition" />
-              {/* Tooltip for each icon */}
+              <Icon
+                className={`w-8 h-8 transition ${
+                  group === "photo"
+                    ? "text-white group-hover:scale-110"
+                    : "text-gray-200 group-hover:scale-110"
+                }`}
+              />
               <span className="absolute left-1/2 -translate-x-1/2 -bottom-10 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
                 {label}
               </span>

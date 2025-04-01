@@ -2,7 +2,7 @@ import BlogTemplate from "@/components/ImageBlog";
 
 const phillyImages = Array.from(
   { length: 7 },
-  (_, i) => `/images/philly${i + 1}.jpg`,
+  (_, i) => `/images/photography/philly${i + 1}.jpg`,
 );
 
 export default function PhillyPage() {

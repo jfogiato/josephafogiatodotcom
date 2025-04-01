@@ -1,7 +1,7 @@
 export const jobs = [
   {
     organization: "MANNA (Metropolitan Area Neighborhood Nutrition Alliance)",
-    logo: "/images/manna_logo.png",
+    logo: "/images/work_logos/manna_logo.png",
     link: "https://mannapa.org",
     location: "Philadelphia, PA",
     date: "2023 – Present",
@@ -31,7 +31,7 @@ export const jobs = [
   },
   {
     organization: "Imperfect Foods",
-    logo: "/images/imperfect_foods_logo.png",
+    logo: "/images/work_logos/imperfect_foods_logo.png",
     link: "https://imperfectfoods.com",
     location: "Philadelphia, PA",
     date: "2021 – 2022",
@@ -53,7 +53,7 @@ export const jobs = [
   },
   {
     organization: "GNC",
-    logo: "/images/gnc_logo.png",
+    logo: "/images/work_logos/gnc_logo.png",
     link: "https://gnc.com",
     location: "Pittsburgh, PA",
     date: "2012 – 2019",

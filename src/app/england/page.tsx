@@ -2,7 +2,7 @@ import BlogTemplate from "@/components/ImageBlog";
 
 const englandImages = Array.from(
   { length: 15 },
-  (_, i) => `/images/england${i + 1}.jpg`,
+  (_, i) => `/images/photography/england${i + 1}.jpg`,
 );
 
 export default function EnglandPage() {

@@ -98,3 +98,15 @@ body {
     color: black !important;
   }
 }
+
+.prose blockquote {
+  border-left: 4px solid #fdd79a; /* adjust color */
+  padding-left: 1rem;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.prose blockquote p::before,
+.prose blockquote p::after {
+  content: none !important;
+}
