@@ -43,7 +43,7 @@ export default async function BlogPage() {
         <Header currentPath="/blog" pages={pages} />
         <h1 className="text-4xl font-bold mt-2">Blog.</h1>
       </div>
-  
+
       {/* Blog Grid */}
       <div className="p-8 w-full max-w-7xl grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
