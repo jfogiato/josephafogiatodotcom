@@ -54,7 +54,7 @@ export default function BasketballButton() {
           }
         >
           <Image
-            src="/images/basketball.png"
+            src="/images/misc/basketball.png"
             alt="Basketball"
             width={90}
             height={90}
