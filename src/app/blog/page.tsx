@@ -37,11 +37,15 @@ export default async function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen p-8 bg-white text-black dark:bg-black dark:text-white">
-      <Header currentPath="/blog" pages={pages} />
-      <h1 className="text-4xl font-bold mb-10 text-center">Blog.</h1>
-
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-black dark:text-white">
+      {/* Sticky Header + Title */}
+      <div className="sticky top-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex flex-col items-center py-4 z-10">
+        <Header currentPath="/blog" pages={pages} />
+        <h1 className="text-4xl font-bold mt-2">Blog.</h1>
+      </div>
+  
+      {/* Blog Grid */}
+      <div className="p-8 w-full max-w-7xl grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
           <Link
             href={`/blog/${blog.slug}`}
