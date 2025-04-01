@@ -25,7 +25,9 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { default: Post, metadata } = await import(`@/content/blog/${slug}.mdx`);
+  const { default: Post, metadata } = await import(
+    `@/content/blog/${slug}.mdx`
+  );
 
   const filePath = path.join(process.cwd(), "src/content/blog", `${slug}.mdx`);
   const rawContent = fs.readFileSync(filePath, "utf-8");
