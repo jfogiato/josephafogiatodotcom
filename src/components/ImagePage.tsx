@@ -6,17 +6,17 @@ import Header from "@/components/Header";
 import { pages } from "@/data/pages";
 import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
 
-interface BlogTemplateProps {
+interface ImagePageProps {
   title: string;
   images: string[];
   href: string;
 }
 
-export default function BlogTemplate({
+export default function ImagePage({
   title,
   images,
   href,
-}: BlogTemplateProps) {
+}: ImagePageProps) {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
 
   useEffect(() => {

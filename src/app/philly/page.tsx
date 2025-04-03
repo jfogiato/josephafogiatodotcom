@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const phillyImages = Array.from(
   { length: 7 },
@@ -6,5 +6,5 @@ const phillyImages = Array.from(
 );
 
 export default function PhillyPage() {
-  return <BlogTemplate title="Philly." images={phillyImages} href="/philly" />;
+  return <ImagePage title="Philly." images={phillyImages} href="/philly" />;
 }

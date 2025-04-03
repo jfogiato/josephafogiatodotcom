@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const englandImages = Array.from(
   { length: 15 },
@@ -7,6 +7,6 @@ const englandImages = Array.from(
 
 export default function EnglandPage() {
   return (
-    <BlogTemplate title="England." images={englandImages} href="/england" />
+    <ImagePage title="England." images={englandImages} href="/england" />
   );
 }

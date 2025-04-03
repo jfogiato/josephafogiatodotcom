@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const superBowlImages = Array.from(
   { length: 25 },
@@ -7,7 +7,7 @@ const superBowlImages = Array.from(
 
 export default function SuperBowlPage() {
   return (
-    <BlogTemplate
+    <ImagePage
       title="Super Bowl '25."
       images={superBowlImages}
       href="/go_birds"

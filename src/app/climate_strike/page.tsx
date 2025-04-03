@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const climateStrikeImages = Array.from(
   { length: 9 },
@@ -7,7 +7,7 @@ const climateStrikeImages = Array.from(
 
 export default function ClimateStrikePage() {
   return (
-    <BlogTemplate
+    <ImagePage
       title="ClimateStrike."
       images={climateStrikeImages}
       href="/climate_strike"

@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const filmImages = Array.from(
   { length: 63 },
@@ -6,5 +6,5 @@ const filmImages = Array.from(
 );
 
 export default function FilmPage() {
-  return <BlogTemplate title="Film." images={filmImages} href="/film" />;
+  return <ImagePage title="Film." images={filmImages} href="/film" />;
 }

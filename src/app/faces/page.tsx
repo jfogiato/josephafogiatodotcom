@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const facesImages = Array.from(
   { length: 10 },
@@ -7,6 +7,6 @@ const facesImages = Array.from(
 
 export default function FacePage() {
   return (
-    <BlogTemplate title="Faces In Places." images={facesImages} href="/faces" />
+    <ImagePage title="Faces In Places." images={facesImages} href="/faces" />
   );
 }

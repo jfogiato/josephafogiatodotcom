@@ -1,4 +1,4 @@
-import BlogTemplate from "@/components/ImageBlog";
+import ImagePage from "@/components/ImagePage";
 
 const hawaiiImages = Array.from(
   { length: 29 },
@@ -6,5 +6,5 @@ const hawaiiImages = Array.from(
 );
 
 export default function HawaiiPage() {
-  return <BlogTemplate title="Hawaii." images={hawaiiImages} href="/hawaii" />;
+  return <ImagePage title="Hawaii." images={hawaiiImages} href="/hawaii" />;
 }
