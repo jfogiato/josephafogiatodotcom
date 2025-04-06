@@ -6,7 +6,5 @@ const germanyImages = Array.from(
 );
 
 export default function GermanyPage() {
-  return (
-    <ImagePage title="Germany." images={germanyImages} href="/germany" />
-  );
+  return <ImagePage title="Germany." images={germanyImages} href="/germany" />;
 }

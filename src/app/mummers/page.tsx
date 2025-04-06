@@ -6,7 +6,5 @@ const mummersImages = Array.from(
 );
 
 export default function MummersPage() {
-  return (
-    <ImagePage title="Mummers." images={mummersImages} href="/mummers" />
-  );
+  return <ImagePage title="Mummers." images={mummersImages} href="/mummers" />;
 }

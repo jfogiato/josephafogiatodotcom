@@ -12,11 +12,7 @@ interface ImagePageProps {
   href: string;
 }
 
-export default function ImagePage({
-  title,
-  images,
-  href,
-}: ImagePageProps) {
+export default function ImagePage({ title, images, href }: ImagePageProps) {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -42,9 +38,18 @@ export default function ImagePage({
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-black dark:text-white">
-      <div className="sticky top-0 w-full bg-grey bg-opacity-90 backdrop-blur-md flex flex-col items-center py-4 z-10">
-        <Header currentPath={href} pages={pages} />
-        <h1 className="text-4xl font-bold mt-2">{title}</h1>
+      <div className="group fixed top-0 left-0 w-full z-50">
+        <div
+          className="w-full px-6 py-4 backdrop-blur-md 
+                    bg-white/70 dark:bg-black/60 
+                    text-black dark:text-white 
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 
+                    flex flex-col items-center border-b border-black/10 dark:border-white/10"
+        >
+          <Header currentPath={href} pages={pages} />
+          <h1 className="text-2xl font-semibold mt-2">{title}</h1>
+        </div>
       </div>
 
       {/* Image Grid */}
