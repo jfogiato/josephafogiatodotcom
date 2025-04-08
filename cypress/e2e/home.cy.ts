@@ -21,11 +21,9 @@ describe("Home Page", () => {
   it("navigates to each linked page via clicking", () => {
     pages.forEach((page) => {
       cy.visit("/");
-  
-      cy.get('#home-page-links')
-        .find(`a[href="${page.href}"]`)
-        .click();
-  
+
+      cy.get("#home-page-links").find(`a[href="${page.href}"]`).click();
+
       cy.url().should("include", page.href);
     });
   });
