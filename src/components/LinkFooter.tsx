@@ -30,7 +30,7 @@ const links = [
 
 export default function LinkFooter() {
   return (
-    <footer className="grid grid-cols-2 gap-6 justify-items-center py-6 px-4 rounded-md bg-black/25 backdrop-blur-sm sm:w-[17vw] w-[25vw]">
+    <footer className="grid grid-cols-2 gap-6 justify-items-center py-6 px-4 rounded-md bg-black/25 backdrop-blur-sm sm:w-[17vw] w-[25vw]" id="footer-links">
       {links.map(({ href, icon: Icon, label }) => (
         <a
           key={href}
