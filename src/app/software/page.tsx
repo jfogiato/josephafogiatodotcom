@@ -59,12 +59,39 @@ export default function SoftwarePage() {
         {showProjects && (
           <div className="mt-4 space-y-4">
             <ProjectSection
+              title="Creepy Crawlie Cinema Club"
+              description="A web app for my friends and I to track and watch movies together, complete with a weekly automated mailer to choose a random move for us."
+              images={[
+                "/images/software/cccc.gif",
+                "/images/software/cccc_logo.png",
+              ]}
+              githubUrl="https://github.com/jfogiato/"
+              liveUrl="https://fogiato.com/"
+              bgColor="#55356a"
+              technologiesUsed={[
+                "Elixir",
+                "Phoenix",
+                "PostgreSQL",
+                "Tailwind CSS",
+                "Fly.io",
+                "Oban",
+                "Swoosh",
+              ]}
+            />
+            <ProjectSection
               title="This site."
               description="Home grown using Next.js, Typescript, and Cypress (with some other odds and ends)."
               images={[]}
               githubUrl="https://github.com/jfogiato/josephafogiatodotcom"
               liveUrl="https://fogiato.com"
               bgColor="#a3a3c2"
+              technologiesUsed={[
+                "Next.js",
+                "Typescript",
+                "Tailwind CSS",
+                "Cypress",
+                "Vercel",
+              ]}
             />
             <ProjectSection
               title="Do Something."
@@ -77,6 +104,13 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/do-something"
               liveUrl="https://cmon-do-something.vercel.app/"
               bgColor="#dbbb8a"
+              technologiesUsed={[
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Vercel",
+                "Cypress",
+              ]}
             />
             <ProjectSection
               title="Collabria"
@@ -89,6 +123,13 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/collabria-fe"
               liveUrl="https://collabria.vercel.app/"
               bgColor="#fade52"
+              technologiesUsed={[
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Vercel",
+                "Cypress",
+              ]}
             />
             <ProjectSection
               title="Grand Budapest Hotel"
@@ -101,6 +142,7 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/overlook"
               liveUrl="https://jfogiato.github.io/overlook/"
               bgColor="#c78890"
+              technologiesUsed={["Javascript", "HTML", "CSS", "Mocha", "Chai"]}
             />
           </div>
         )}
