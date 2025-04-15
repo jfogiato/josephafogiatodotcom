@@ -15,6 +15,7 @@ interface ProjectSectionProps {
   githubUrl: string;
   liveUrl: string;
   bgColor?: string;
+  technologiesUsed?: string[]; // New prop for technologies
 }
 
 export default function ProjectSection({
@@ -24,6 +25,7 @@ export default function ProjectSection({
   githubUrl,
   liveUrl,
   bgColor = "#1E40AF",
+  technologiesUsed = [], // Default to empty array
 }: ProjectSectionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -66,8 +68,26 @@ export default function ProjectSection({
       </div>
 
       {isOpen && (
-        <div className="mt-2 space-y-2">
-          <p className="">{description}</p>
+        <div className="mt-2 space-y-4">
+          <p>{description}</p>
+          
+          {/* Technologies Section */}
+          {technologiesUsed.length > 0 && (
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-300">Technologies Used:</h3>
+              <div className="flex flex-wrap gap-2">
+                {technologiesUsed.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-2 py-1 text-sm bg-black/20 rounded-md text-gray-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {images.map((src, index) => (
               <ProjectCard key={index} src={src} />
