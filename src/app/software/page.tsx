@@ -58,7 +58,7 @@ export default function SoftwarePage() {
 
         {showProjects && (
           <div className="mt-4 space-y-4">
-              <ProjectSection
+            <ProjectSection
               title="Creepy Crawlie Cinema Club"
               description="A web app for my friends and I to track and watch movies together, complete with a weekly automated mailer to choose a random move for us."
               images={[
@@ -68,7 +68,15 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/"
               liveUrl="https://fogiato.com/"
               bgColor="#55356a"
-              technologiesUsed={["Elixir", "Phoenix", "PostgreSQL", "Tailwind CSS", "Fly.io", "Oban", "Swoosh"]}
+              technologiesUsed={[
+                "Elixir",
+                "Phoenix",
+                "PostgreSQL",
+                "Tailwind CSS",
+                "Fly.io",
+                "Oban",
+                "Swoosh",
+              ]}
             />
             <ProjectSection
               title="This site."
@@ -77,7 +85,13 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/josephafogiatodotcom"
               liveUrl="https://fogiato.com"
               bgColor="#a3a3c2"
-              technologiesUsed={["Next.js", "Typescript", "Tailwind CSS", "Cypress", "Vercel"]}
+              technologiesUsed={[
+                "Next.js",
+                "Typescript",
+                "Tailwind CSS",
+                "Cypress",
+                "Vercel",
+              ]}
             />
             <ProjectSection
               title="Do Something."
@@ -90,7 +104,13 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/do-something"
               liveUrl="https://cmon-do-something.vercel.app/"
               bgColor="#dbbb8a"
-              technologiesUsed={["React", "Typescript", "Tailwind CSS", "Vercel", "Cypress"]}
+              technologiesUsed={[
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Vercel",
+                "Cypress",
+              ]}
             />
             <ProjectSection
               title="Collabria"
@@ -103,7 +123,13 @@ export default function SoftwarePage() {
               githubUrl="https://github.com/jfogiato/collabria-fe"
               liveUrl="https://collabria.vercel.app/"
               bgColor="#fade52"
-              technologiesUsed={["React", "Typescript", "Tailwind CSS", "Vercel", "Cypress"]}
+              technologiesUsed={[
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Vercel",
+                "Cypress",
+              ]}
             />
             <ProjectSection
               title="Grand Budapest Hotel"

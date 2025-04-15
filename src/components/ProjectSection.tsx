@@ -70,11 +70,13 @@ export default function ProjectSection({
       {isOpen && (
         <div className="mt-2 space-y-4">
           <p>{description}</p>
-          
+
           {/* Technologies Section */}
           {technologiesUsed.length > 0 && (
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-gray-300">Technologies Used:</h3>
+              <h3 className="text-sm font-semibold text-gray-300">
+                Technologies Used:
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {technologiesUsed.map((tech, index) => (
                   <span
