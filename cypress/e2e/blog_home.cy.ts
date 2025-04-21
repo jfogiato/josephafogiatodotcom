@@ -7,13 +7,13 @@ describe("Blog Page", () => {
     cy.get("h1").should("contain.text", "Blog.");
   });
 
-  it("should display blog posts in a grid", () => {
-    cy.get(".grid").should("exist");
-    cy.get(".grid").children().should("have.length.at.least", 1);
+  it("should display blog posts in a vertical list", () => {
+    cy.get("article").should("exist");
+    cy.get("article").should("have.length.at.least", 1);
   });
 
   it("should display correct information for each blog post", () => {
-    cy.get(".grid > a")
+    cy.get("article")
       .first()
       .within(() => {
         cy.get("img").should("exist");
@@ -24,14 +24,8 @@ describe("Blog Page", () => {
   });
 
   it("should navigate to individual blog post when clicked", () => {
-    cy.get(".grid > a").first().click();
+    cy.get("article").first().click();
     cy.url().should("include", "/blog/");
-  });
-
-  it("should truncate long descriptions", () => {
-    cy.get(".text-gray-800").each(($desc) => {
-      expect($desc.text().length).to.be.at.most(153);
-    });
   });
 
   it("should format dates correctly", () => {
@@ -39,18 +33,35 @@ describe("Blog Page", () => {
       .first()
       .should(($date) => {
         const dateText = $date.text();
-        expect(dateText).to.match(/\d{1,2}\/\d{1,2}\/\d{4}.*·.*/);
+        // Check for "Month Day, Year · X min read" format
+        expect(dateText).to.match(/[A-Z][a-z]+ \d{1,2}, \d{4}.*·.*/);
       });
   });
 
   it("should have proper image attributes", () => {
     cy.get("img").first().should("have.attr", "alt").should("not.be.empty");
+
+    cy.get("img")
+      .first()
+      .should("have.class", "object-cover")
+      .and("have.class", "rounded-lg");
   });
 
-  it("should apply hover effects to blog cards", () => {
-    cy.get(".grid > a")
+  it("should apply hover styles to blog cards", () => {
+    cy.get("article")
       .first()
+      .parent()
       .trigger("mouseover")
-      .should("have.class", "hover:shadow-2xl");
+      .within(() => {
+        cy.get("h2").should("have.class", "group-hover:text-blue-600");
+      });
+  });
+
+  it("should have proper article background and border", () => {
+    cy.get("article")
+      .first()
+      .should("have.class", "bg-gray-50")
+      .and("have.class", "border")
+      .and("have.class", "border-gray-200");
   });
 });
