@@ -44,35 +44,45 @@ export default async function BlogPage() {
         <h1 className="text-4xl font-bold mt-2">Blog.</h1>
       </div>
 
-      {/* Blog Grid */}
-      <div className="p-8 w-full max-w-7xl grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {/* Blog List */}
+      <div className="w-full max-w-3xl px-4 py-8">
         {blogs.map((blog) => (
           <Link
             href={`/blog/${blog.slug}`}
             key={blog.slug}
-            className="group block rounded overflow-hidden shadow-lg hover:shadow-2xl transition dark:shadow-zinc-800 dark:hover:shadow-zinc-600"
+            className="block mb-8 group"
           >
-            <div className="relative w-full h-48">
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold group-hover:underline">
-                {blog.title}
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                {new Date(blog.date).toLocaleDateString()} · {blog.readTime}
-              </p>
-              <p className="mt-2 text-gray-800 dark:text-gray-200 text-sm">
-                {blog.description.length > 150
-                  ? `${blog.description.substring(0, 150)}...`
-                  : blog.description}
-              </p>
-            </div>
+            <article className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-900 transition duration-200">
+              {/* Image */}
+              <div className="relative w-full aspect-[21/9] mb-6">
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover rounded-lg"
+                  priority
+                />
+              </div>
+
+              {/* Content */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                  {blog.title}
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {new Date(blog.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                  <span className="mx-2">·</span>
+                  {blog.readTime}
+                </p>
+                <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
+                  {blog.description}
+                </p>
+              </div>
+            </article>
           </Link>
         ))}
       </div>
