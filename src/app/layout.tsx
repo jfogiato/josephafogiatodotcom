@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import BugReportButton from "@/components/BugReportButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body className="font-mono antialiased">
         {children}
         <BugReportButton />
+        <Analytics />
       </body>
     </html>
   );
