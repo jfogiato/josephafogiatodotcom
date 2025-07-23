@@ -44,6 +44,8 @@ Then open **[localhost:3000](http://localhost:3000)** in your browser.
  │   ├── film/               # Film photography section
  │   ├── [page]/             # Additional photography pages...
  │   ├── layout.tsx          # Root layout with global styles
+ │   ├── content/            # Content
+ │           ├── blog/       # Blog Pages
  ├── components/             # Reusable UI components
  │   ├── Header.tsx          # Persistent header with navigation
  │   ├── BugReportButton.tsx # Floating bug report button
