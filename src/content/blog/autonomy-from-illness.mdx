@@ -1,0 +1,183 @@
+import BlogImage from "@/components/BlogImage";
+
+export const metadata = {
+  title: "Autonomy from Illness - Launching Client Choice at MANNA.",
+  date: "2025-07-25",
+  tags: ["blog", "personal"],
+  image: "/images/blog/autonomy-from-illness/colleen_meal.JPG",
+  description:
+    "From humble roots during the AIDS crisis to launching Client Choice at MANNA, this is a story of resilience, autonomy, and a client-centered approach.",
+};
+
+## The History
+
+MANNA opened its doors in 1990 when seven members of the First Presbyterian Church of Philadelphia began delivering meals to their neighbors dying of AIDS. During this time, people diagnosed with AIDS found themselves incredibly ill, isolated, and in need of hope. MANNA’s founders fulfilled this need with nourishment—giving love and community to those who needed it most.
+
+In the 35 years since our founding, MANNA has stayed true to its original mission of providing nourishment to our critically ill neighbors. As our knowledge of utilizing food as medicine deepened, our program evolved to include medically-tailored meals created in our in-house kitchen and professional nutrition counseling. After recognizing the widespread need for our services, MANNA began serving anyone at nutritional risk due to critical illness in 2006. Since then, MANNA has served clients with over 100 different illnesses. Since 1990, our program has improved the health and quality of life of more than 50,000 of our Philadelphia area neighbors with more than 23,000,000 medically nourishing meals.<sup>1</sup>
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/manna_og.jpg"
+  alt="A blue banner with the MANNA in yellow letters during an event in the 90s."
+  caption="A MANNA event from the 90s."
+  width={800}
+/>
+
+## The Current Program
+
+Throughout the years, MANNA has made a concerted effort to give clients more variety in their meals, especially as it relates to cultural competency. We now offer over 125 different meals throughout the 3 week menu cycle and recently rolled out an entirely vegetarian menu including dishes like Caribbean Jerk Lentils and Paow Quesadillas.
+
+As a client of MANNA, once a week, you receive 7 breakfasts, 7 lunches, and 7 dinners (and snacks + fruit) tailored to your medical needs. You have the ability to specify your protein preferences (no beef, no pork, no seafood) and several illness-related diet requirements (renal disease, high protein, soft foods, etc.), but you don’t have a say in exactly which meals you get.
+
+Despite the huge focus we’ve had on improving our offerings, we’ve been unable to give more granular choice to our clients due to a lack of technological infrastructure.
+
+If you or a loved one has had a life-threatening diagnosis, you can likely resonate with the lack of control you feel. The disease happens to you, and you have no say. You can treat it with diet, therapies, pharmaceuticals, and a myriad of other options, but in the end, you don’t have a say in your diagnosis.
+
+We set out to change that by returning some autonomy to some of our sickest neighbors.
+
+## The Team
+
+Like any monumental undertaking, trying to do it alone is a Sisyphus-ian task. Building everything required to interface with clients, gather their meal selections, produce them, pack them, and ultimately deliver the meals to their front door, requires a team of folks - both internal and external - who have deep domain knowledge and the ability to execute at a high level.
+
+#### _Internal_
+
+This project spanned nearly every department at MANNA. Kitchen and Distribution operations were impacted the most, followed by Nutrition & Client Services, the Volunteer Department, Research, and Healthcare Partnerships. Because of the wide range of stakeholders, it was decided that we form a [Tiger Team](https://en.wikipedia.org/wiki/Tiger_team) Our COO Nicole lead the charge, with support from Mike (Director of Ops), Harrison (Logistics and Volunteer), Sam (Distribution), Adrian (Research), Emily (N&CS), Tonya (N&CS), and me (Tech). We worked hand-in-hand, week after week to make the vision come to life.
+
+#### _External_
+
+Despite having a strong internal team, it’s no surprise that we don’t have any staff software engineers at MANNA. To fill that gap, we partnered with a [consulting/engineering firm](https://processfirst.xyz) to build the tech infrastructure needed to support our goals. I had the incredible pleasure of working with a brilliant team of engineers, product designers, UI/UX researchers, and software architects (shouts out to A, Tyler, Nick, Dave, Claire, Chad, and Matt!). Together, we built a platform from scratch that interfaces with our CRM system via an ETL pipeline. That gave us the foundation to create a client-facing portal—complete with advanced reporting, optimized database normalization, and a “plug and play” architecture for future integrations.
+
+## The Pilot
+
+We have the vision, we have the team, now how do we test it?
+
+In June of 2024 we ran a low-tech version (think Excel, calling clients to gather orders, manually packing and labeling boxes) of what came to be known as “Client Choice”.
+
+The Tiger Team selected a group of 15 clients spanning different demographic and illness criteria and enrolled them in the Client Choice Pilot. This pilot ran for three weeks and was designed to test:
+
+- Operational feasibility - can we stand up and scale the systems and processes?
+- Client Engagement - will people use the program?
+- Impacts to outcomes - will the program drive better health metrics for our clients?
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/cc_pilot_group.jpeg"
+  alt="Joe, Chris, Harrison, and Mike with the first group of Client Choice pilot meal boxes."
+  caption="Joe, Chris, Harrison, and Mike with the first group of Client Choice pilot meal boxes."
+  width={300}
+/>
+
+After the pilot finished, the results were in - we felt good about operationalizing the program, clients loved the ability to choose their meals, and clients ate more of their weekly meals.
+
+We knew it was viable. Now we needed to figure out how to make the pilot permanent.
+
+## The Plan
+
+How do you take a pilot program and build out the technology and processes to make it actionable, scalable, and effective? That was the next hurdle for the Tiger Team.
+
+The first question we had to ask was “How does this fit into (or _not_ fit into) our existing operations?”.
+
+In the current state of operations, we get a rough client census for a given week, order to that census (~2 weeks out), cook to that census (~1 week out), and deliver to a finalized list of clients. If we were to offer clients the ability to choose their meals, how would that impact our process? Would they be able to customize up until their delivery was packed? If so, that would mean a complete overhaul of our meal production. If not, it would mean increased lead times for our clients.
+
+The second question related to scope - what _can_ clients choose?
+
+Every meal? Every snack? Fruit too? Just _some_ meals? If they can choose every single thing from the jump, how does that impact operations? How do we pack those bags? How do we ensure that their medical nutrition needs are met?
+
+The third question was “_Who_ can choose?”.
+
+Every single client? Dependents too? Just certain diets? Just certain days?
+
+Every answer to every question had tradeoffs. Shortened lead times meant more operational strain, but better UX. Fewer clients choosing means things are more scalable and sustainable, but also means less overall autonomy and client satisfaction. We had to find the balance of what was best for our clients, while ensuring our operations weren’t disrupted too much and that staff wasn’t overworked or overwhelmed.
+
+The decision we arrived at was ultimately: the ability to choose dinners only, for a single delivery day-of-the-week, and the entire thing slotted into our current operational flow.
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/sam_towers_numbered.JPG"
+  alt="Meal towers numbered for packing Client Choice meals."
+  caption="Meal towers numbered for packing Client Choice meals."
+  width={800}
+/>
+
+## The Execution
+
+A launch date was set - Thursday July 17th, 2025 with an initial client communication date of June 23rd.
+
+From the day we chose the launch date to D-Day itself, the team started to focus on what was needed to succeed.
+
+We stood up v0.1 of the Client Portal and completed UAT. We integrated feedback from stakeholders and put the finishing touches on the client-facing screens. We triple checked delivery data against our current CRM system including every piece of client information possible. We created a labeling system for each client meal bag, along with a way to bulk print in variable chunks. We thought through the packing, sorting, and delivery process and created the necessary processes and reports to make it happen.
+
+On June 23rd, when the first batch of text messages went out to clients letting them know it was time to customize, I literally cried - all the work was finally coming to fruition. It felt incredible. Clients were logging in, choosing, poking around, and engaging with the thing we built.
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/cc_portal_chart.jpg"
+  alt="Screenshot of a graph showing the usage of the Client portal."
+  caption="Screenshot of a graph showing the usage of the Client portal."
+  width={800}
+/>
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/cc_portal_screenshot.jpg"
+  alt="Screenshot of the Client Portal."
+  caption="Screenshot of the Client Portal."
+  width={300}
+/>
+
+But we still had to operationalize their choices.
+
+When that fateful week rolled around, the team was anxious but ready, and when the dust settled, we realized we did it - we successfully introduced Client Choice and gave our clients more autonomy in treating their health.
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/davita_craig.JPG"
+  alt="Davita and Craig packing and double checking Client Choice meals."
+  caption="Davita and Craig packing and double checking Client Choice meals."
+  width={800}
+/>
+
+The first iteration wasn’t flawless, but it was 85% there. We had small things to fix (like getting better-adhering labels, packing the racks alphabetically instead of by diet, etc.), but on the whole, we accomplished what we set out to do.
+
+We took a collective sigh of relief.
+
+## The Future
+
+After the second week has come and gone, we’re already starting to look toward the future. We’re aiming to serve clients on an additional delivery day within the next month, and hope to have the program rolled out to all applicable clients by this time next year, at the absolute latest.
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/cc_meal_bags.jpg"
+  alt="The first group of Client Choice meal bags ready for delivery."
+  caption="The first group of Client Choice meal bags ready for delivery."
+  width={800}
+/>
+
+We’re looking at which items we can offer choice on next.
+
+We’re asking clients how we can improve their UX whether it’s via technology or a lack thereof.
+
+We’re counting this as a win, but not the end.
+
+There are many learnings I’ve taken away from this experience, but the _biggest_ one is that _your team is *everything*_.
+
+I am so proud of my team - internal and external - have put into this project. It’s a truly monumental leap for MANNA, and one that seemed impossible just a short year ago.
+
+<BlogImage
+  src="/images/blog/autonomy-from-illness/mike_joe_funny.JPG"
+  alt="Mike and Joe deep in thought during the first Client Choice pack."
+  caption="Mike and Joe deep in thought during the first Client Choice pack."
+  width={800}
+/>
+
+The planning and communication and passion required to make this happen was astronomical, and I thank these folks for putting their trust in me as the de-facto PM.
+
+Overall, I’m just so grateful.
+
+For the universe putting me here. For the opportunity to build something that positively impacts the most vulnerable. For technology being used in a way that strictly benefits folks. For partnerships built on trust and communication. For the incredible team at MANNA and the trust they’ve given me.
+
+I truly hope you can say the same thing at least once in your life.
+
+---
+
+### Footnotes
+
+<div className="border-t pt-6 mt-1 italic text-sm text-gray-600 dark:text-gray-400 space-y-4">
+
+<sup>1</sup> Check out our [history page](https://mannapa.org/about/history/)
+for more information on our founding and growth.
+
+</div>
