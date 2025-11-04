@@ -43,7 +43,7 @@ export default function ImagePage({ title, images, href }: ImagePageProps) {
           className="w-full px-6 py-4 backdrop-blur-md 
                     bg-white/70 dark:bg-black/60 
                     text-black dark:text-white 
-                    opacity-0 group-hover:opacity-100 
+                    lg:opacity-0 lg:group-hover:opacity-100 
                     transition-opacity duration-300 
                     flex flex-col items-center border-b border-black/10 dark:border-white/10"
         >
@@ -53,7 +53,7 @@ export default function ImagePage({ title, images, href }: ImagePageProps) {
       </div>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((src, index) => (
           <button
             key={index}
