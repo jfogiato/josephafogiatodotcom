@@ -59,14 +59,39 @@ export default function SoftwarePage() {
         {showProjects && (
           <div className="mt-4 space-y-4">
             <ProjectSection
+              title="Integration Hub"
+              description="This one is my baby - A modular integration platform to connect various third-party services and APIs, enabling seamless data flow and automation for delivering medically tailored meals. Complete with a smart referral portal, client-facing meal selection module, and much much more!"
+              images={[
+                "/images/software/ihub_demo.gif",
+                "/images/software/ihub8.png",
+                "/images/software/ihub6.png",
+                "/images/software/ihub3.png",
+                "/images/software/ihub4.png",
+                "/images/software/ihub5.png",
+                "/images/software/ihub7.png",
+              ]}
+              githubUrl="https://github.com/jfogiato/"
+              liveUrl="https://ihub.mannapa.org"
+              bgColor="#012f45"
+              technologiesUsed={[
+                "Elixir",
+                "Phoenix",
+                "PostgreSQL",
+                "Tailwind CSS",
+                "Fly.io",
+                "Oban",
+                "Swoosh",
+              ]}
+            />
+            <ProjectSection
               title="Creepy Crawlie Cinema Club"
               description="A web app for my friends and I to track and watch movies together, complete with a weekly automated mailer to choose a random move for us."
               images={[
                 "/images/software/cccc.gif",
                 "/images/software/cccc_logo.png",
               ]}
-              githubUrl="https://github.com/jfogiato/"
-              liveUrl="https://fogiato.com/"
+              githubUrl="https://github.com/jfogiato/creepy_crawlie_cinema_club"
+              liveUrl="https://creepycrawlie.fogiato.com/"
               bgColor="#55356a"
               technologiesUsed={[
                 "Elixir",
@@ -122,7 +147,7 @@ export default function SoftwarePage() {
               ]}
               githubUrl="https://github.com/jfogiato/collabria-fe"
               liveUrl="https://collabria.vercel.app/"
-              bgColor="#fade52"
+              bgColor="#eac71bff"
               technologiesUsed={[
                 "React",
                 "Typescript",
