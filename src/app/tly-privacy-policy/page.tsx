@@ -1,5 +1,3 @@
-// app/privacy-policy/page.tsx (or pages/privacy-policy.tsx if using pages router)
-
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
@@ -17,8 +15,8 @@ export default function PrivacyPolicy() {
               Today Last Year
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Today Last Year ("the App") is developed by Joe Fogiato. This privacy 
-              policy explains how the App handles your information.
+              Today Last Year (&quot;the App&quot;) is developed by Joe Fogiato.
+              This privacy policy explains how the App handles your information.
             </p>
           </section>
 
@@ -27,9 +25,11 @@ export default function PrivacyPolicy() {
               Data Collection
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              <strong className="text-gray-900">We do not collect any data.</strong> The App 
-              operates entirely on your device and does not transmit any information 
-              to external servers.
+              <strong className="text-gray-900">
+                We do not collect any data.
+              </strong>{" "}
+              The App operates entirely on your device and does not transmit any
+              information to external servers.
             </p>
           </section>
 
@@ -38,10 +38,10 @@ export default function PrivacyPolicy() {
               Calendar Access
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              The App requests access to your device's calendar solely to display 
-              events from one year ago. Your calendar data is read locally on your 
-              device and is never stored, copied, or transmitted anywhere. The App 
-              does not modify your calendar in any way.
+              The App requests access to your device&apos;s calendar solely to
+              display events from one year ago. Your calendar data is read
+              locally on your device and is never stored, copied, or transmitted
+              anywhere. The App does not modify your calendar in any way.
             </p>
           </section>
 
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
               Third-Party Services
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              The App does not use any third-party analytics, advertising, or 
+              The App does not use any third-party analytics, advertising, or
               tracking services.
             </p>
           </section>
@@ -60,9 +60,9 @@ export default function PrivacyPolicy() {
               Data Storage
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              The App does not store any of your personal data. All calendar 
-              information is fetched directly from your device's calendar each 
-              time you open the App.
+              The App does not store any of your personal data. All calendar
+              information is fetched directly from your device&apos;s calendar
+              each time you open the App.
             </p>
           </section>
 
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
               Changes to This Policy
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              If this privacy policy changes, the updated version will be posted 
+              If this privacy policy changes, the updated version will be posted
               on this page with a revised date.
             </p>
           </section>
@@ -81,10 +81,10 @@ export default function PrivacyPolicy() {
               Contact
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              If you have any questions about this privacy policy, please contact 
-              me at{" "}
-              <a 
-                href="mailto:joe@fogiato.com" 
+              If you have any questions about this privacy policy, please
+              contact me at{" "}
+              <a
+                href="mailto:joe@fogiato.com"
                 className="text-orange-600 hover:text-orange-700 underline"
               >
                 joseph@fogiato.com
