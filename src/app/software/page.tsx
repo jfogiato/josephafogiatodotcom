@@ -18,32 +18,6 @@ export default function SoftwarePage() {
 
       <h1 className="text-4xl font-bold mb-6">Software.</h1>
 
-      {/* Technologies Section */}
-      <div className="w-full max-w-4xl mt-6">
-        <button
-          onClick={() => setShowTechnologies(!showTechnologies)}
-          className="w-full flex justify-between items-center bg-gray-200 dark:bg-gray-800 p-4 rounded-lg shadow-md text-left"
-        >
-          <h2 className="text-2xl font-semibold">Technologies.</h2>
-          <ChevronDownIcon
-            className={`w-6 h-6 transition-transform ${showTechnologies ? "rotate-180" : ""}`}
-          />
-        </button>
-
-        {showTechnologies && (
-          <div className="mt-4 space-y-8">
-            {techTiersAndSkills.map((tier, index) => (
-              <TechSection
-                key={index}
-                title={tier.title}
-                subtitle={tier.subtitle}
-                technologies={tier.technologies}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-
       {/* Projects Section */}
       <div className="w-full max-w-4xl mt-6">
         <button
@@ -81,6 +55,36 @@ export default function SoftwarePage() {
                 "Fly.io",
                 "Oban",
                 "Swoosh",
+              ]}
+            />
+            <ProjectSection
+              title="Wedding Website"
+              description="A full-featured wedding website for our Fall 2026 celebration. Features a complete RSVP system with household management, email campaigns (invitations, confirmations, reminders), photo galleries, travel & lodging information, and a comprehensive admin panel. Built with a custom design system featuring a rustic chic aesthetic with mid-century modern influences."
+              images={[
+                "/images/software/wedding1.png",
+                "/images/software/wedding2.png",
+                "/images/software/wedding3.png",
+                "/images/software/wedding4.png",
+                "/images/software/wedding5.png",
+                "/images/software/wedding6.png",
+                "/images/software/wedding7.png",
+                "/images/software/wedding8.png",
+                "/images/software/wedding9.png",
+                "/images/software/wedding10.png",
+              ]}
+              githubUrl="https://github.com/jfogiato/"
+              liveUrl="https://wedding.fogiato.com"
+              bgColor="#c2703a"
+              technologiesUsed={[
+                "Elixir",
+                "Phoenix",
+                "LiveView",
+                "PostgreSQL",
+                "Tailwind CSS",
+                "Fly.io",
+                "Oban",
+                "Swoosh",
+                "Resend",
               ]}
             />
             <ProjectSection
@@ -169,6 +173,32 @@ export default function SoftwarePage() {
               bgColor="#c78890"
               technologiesUsed={["Javascript", "HTML", "CSS", "Mocha", "Chai"]}
             />
+          </div>
+        )}
+      </div>
+
+      {/* Technologies Section */}
+      <div className="w-full max-w-4xl mt-6">
+        <button
+          onClick={() => setShowTechnologies(!showTechnologies)}
+          className="w-full flex justify-between items-center bg-gray-200 dark:bg-gray-800 p-4 rounded-lg shadow-md text-left"
+        >
+          <h2 className="text-2xl font-semibold">Technologies.</h2>
+          <ChevronDownIcon
+            className={`w-6 h-6 transition-transform ${showTechnologies ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        {showTechnologies && (
+          <div className="mt-4 space-y-8">
+            {techTiersAndSkills.map((tier, index) => (
+              <TechSection
+                key={index}
+                title={tier.title}
+                subtitle={tier.subtitle}
+                technologies={tier.technologies}
+              />
+            ))}
           </div>
         )}
       </div>
