@@ -33,6 +33,27 @@ export default function SoftwarePage() {
         {showProjects && (
           <div className="mt-4 space-y-4">
             <ProjectSection
+              title="Today Last Year"
+              description="A privacy-focused iOS app that shows you what you were doing exactly one year ago today. Unlike social media 'memories' features, TLY reads your calendar data locally without collecting any user information. Features include home screen widgets (small and medium sizes), customizable daily notifications, and a warm, minimal design aesthetic."
+              images={[
+                "/images/software/tly1.png",
+                "/images/software/tly2.png",
+                "/images/software/tly3.png",
+                "/images/software/tly4.png",
+                "/images/software/tly5.png",
+              ]}
+              githubUrl="https://github.com/jfogiato/TodayLastYear"
+              liveUrl="https://apps.apple.com/us/app/today-last-year/id6757314833"
+              bgColor="#eb9a53ff"
+              technologiesUsed={[
+                "Swift",
+                "SwiftUI",
+                "EventKit",
+                "WidgetKit",
+                "UserNotifications",
+              ]}
+            />
+            <ProjectSection
               title="Integration Hub"
               description="This one is my baby - A modular integration platform to connect various third-party services and APIs, enabling seamless data flow and automation for delivering medically tailored meals. Complete with a smart referral portal, client-facing meal selection module, and much much more!"
               images={[

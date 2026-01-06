@@ -10,6 +10,7 @@ import {
   SiTypescript,
   SiRubyonrails,
   SiPhoenixframework,
+  SiSwift,
 } from "react-icons/si";
 import { PiMicrosoftExcelLogoLight } from "react-icons/pi";
 import { BiLogoMicrosoft } from "react-icons/bi";
@@ -24,6 +25,11 @@ export const techTiersAndSkills = [
         name: "Ruby on Rails",
         icon: SiRubyonrails,
         techUrl: "https://rubyonrails.org/",
+      },
+      {
+        name: "Swift",
+        icon: SiSwift,
+        techUrl: "https://www.swift.org/",
       },
     ],
   },
